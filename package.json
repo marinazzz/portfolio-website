@@ -1,0 +1,15 @@
+{
+	"name": "portfolio-website",
+	"version": "1.0.0",
+	"description": "Personal portfolio website Marina Zujic",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"sass": "sass --watch scss/style.scss css/style.css"
+	},
+	"author": "Marina Zujic",
+	"license": "ISC",
+	"devDependencies": {
+		"sass": "^1.26.11"
+	}
+}
