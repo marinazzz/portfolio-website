@@ -1,0 +1,39 @@
+.section-about {
+	padding-top: 3rem;
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 2rem;
+		align-items: stretch;
+		padding-top: 4rem;
+
+		@include breakpoint-up("sm") {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 6rem;
+		}
+
+		@include breakpoint-up("md") {
+			column-gap: 10rem;
+		}
+
+		p {
+			padding-bottom: 2.5rem;
+		}
+	}
+
+	&__icons {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 1rem;
+		align-items: center;
+
+		@include breakpoint-up("lg") {
+			row-gap: 3rem;
+		}
+
+		&-wrapp {
+			justify-self: center;
+		}
+	}
+}

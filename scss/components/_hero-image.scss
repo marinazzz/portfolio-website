@@ -1,0 +1,63 @@
+.section-hero__image {
+	position: relative;
+	min-height: 47rem;
+	background: url(../../assets/images/icons/hero-img-tablet.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@include breakpoint-up("xxs") {
+		background-size: 97%;
+	}
+
+	@include breakpoint-up("xs") {
+		background-size: 87%;
+	}
+
+	@include breakpoint-up("sm") {
+		background-size: 79%;
+	}
+
+	@include breakpoint-up("md") {
+		flex: 3;
+		background: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: url(../../assets/images/icons/hero-img-tablet.svg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+
+			@include breakpoint-up("lg") {
+				width: 80rem;
+				background-size: 90%;
+			}
+		}
+	}
+
+	@include breakpoint-up("lg") {
+		min-height: 60rem;
+	}
+
+	@include breakpoint-up("xl") {
+		&::before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: url(../../assets/images/icons/hero-img-tablet.svg);
+			background-size: 96%;
+			background-repeat: no-repeat;
+			background-position: center bottom;
+
+			@include breakpoint-up("xl") {
+				width: 80rem;
+				background-position: center 25%;
+			}
+		}
+	}
+}

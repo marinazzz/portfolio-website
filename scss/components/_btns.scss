@@ -1,0 +1,7 @@
+.primary-button {
+	@include breakpoint-down("md") {
+		&--center {
+			margin: 0 auto;
+		}
+	}
+}

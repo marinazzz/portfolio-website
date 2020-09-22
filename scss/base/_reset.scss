@@ -15,7 +15,7 @@ main {
 }
 
 a {
-	color: black;
+	color: white;
 	text-decoration: none;
 }
 
@@ -35,6 +35,7 @@ ul {
 }
 
 button {
+	display: block;
 	cursor: pointer;
 	border: none;
 	outline: none;

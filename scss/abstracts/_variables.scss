@@ -1,0 +1,24 @@
+//COLORS
+
+//Dark Mode
+$dark-blue: hsl(209, 23%, 22%); //Elements
+$very-dark-blue: hsl(207, 26%, 17%); //Background
+
+//Light Mode
+$very-dark-blue-text: hsl(200, 15%, 8%); //Text
+$dark-gray: hsl(0, 0%, 52%); //Input
+$light-gray: hsla(0, 5%, 65%, 0.439); //Input outline
+$very-light-gray: hsl(0, 0%, 98%); //Background
+
+$white: hsl(0, 0%, 100%); //Dark Mode Text & Light Mode Elements
+
+//PADDING
+$xs: 0.5rem;
+$sm: 1.4rem;
+$md: 2rem;
+$lg: 3rem;
+$xl: 4rem;
+$xxl: 6rem;
+
+// BREAKPOINTS
+$breakpoints: ('xxs': '560px', 'xs': '640px', 'sm': '700px', 'md': '768px', 'lg': '942px', 'xl': '1200px');

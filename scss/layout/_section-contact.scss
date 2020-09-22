@@ -1,0 +1,20 @@
+.section-contact {
+	background: url(../../assets/images/icons/Group.png);
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-position: 100%;
+
+	&__content {
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		row-gap: 2rem;
+
+		@include breakpoint-up("sm") {
+			row-gap: 4rem;
+		}
+	}
+	&__icons {
+		@include display-flex;
+		max-width: 15rem;
+	}
+}

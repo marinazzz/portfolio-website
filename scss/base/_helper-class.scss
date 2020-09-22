@@ -1,0 +1,19 @@
+.container {
+	max-width: 110rem;
+	margin: 0 auto;
+	// padding: 4rem 2rem 0 2rem;
+	@include display-flex;
+	@include padding-wrapper;
+
+	// @include breakpoint-up("sm") {
+	// 	padding: 3rem 3rem 0 3rem;
+	// }
+
+	&--display-block {
+		display: block;
+	}
+
+	&--no-pad-y {
+		padding: 2rem 0 0 0;
+	}
+}
