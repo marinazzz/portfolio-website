@@ -31,11 +31,18 @@ h2 {
 	}
 }
 
+h3 {
+	font-size: 2rem;
+
+	@include breakpoint-up("lg") {
+		font-size: 1.8rem;
+	}
+}
+
 span {
 	font-weight: normal;
 }
 
 p {
-	font-size: 1.6rem;
-	line-height: 3.1rem;
+	line-height: 2.7rem;
 }

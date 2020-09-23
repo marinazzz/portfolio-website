@@ -1,7 +1,32 @@
 .primary-button {
-	@include breakpoint-down("md") {
-		&--center {
-			margin: 0 auto;
+	padding: 0.7rem 1.6rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: 0.09rem;
+	border: 0.1rem solid transparent;
+	border-radius: 1.8rem;
+	color: $secondary-btn-color;
+	background: $primary-btn-color;
+
+	&:hover {
+		background: lighten(hsl(243, 100%, 69%), 10);
+		border: 0.1rem solid $primary-btn-color;
+		transition: all 0.25s ease;
+	}
+
+	&--ghost {
+		color: $primary-btn-color;
+		background: transparent;
+		border: 0.1rem solid $primary-btn-color;
+
+		&:hover {
+			background: lighten(hsl(243, 100%, 69%), 10);
+			color: $secondary-btn-color;
 		}
+	}
+}
+@include breakpoint-down("md") {
+	.primary-button--center {
+		margin: 0 auto;
 	}
 }
