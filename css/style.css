@@ -15,8 +15,10 @@ main {
 }
 
 a {
-  color: white;
+  color: #6961ff;
   text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
 }
 
 p {
@@ -59,6 +61,7 @@ h2,
 h3,
 h4 {
   margin: 0;
+  color: #3f3d56;
   font-weight: 800;
 }
 
@@ -89,10 +92,6 @@ h3 {
   }
 }
 
-span {
-  font-weight: normal;
-}
-
 p {
   line-height: 2.7rem;
 }
@@ -117,9 +116,16 @@ p {
   padding: 2rem 0 0 0;
 }
 
+.heading-accent {
+  color: #6961ff;
+}
+
+.heading-neutral {
+  color: #f3f4f6;
+}
+
 header {
-  background: linear-gradient(180deg, rgba(30, 18, 226, 0.95) 0%, rgba(46, 40, 180, 0.514583) 88.02%, rgba(65, 67, 126, 0) 100%);
-  background-blend-mode: multiply;
+  background: #fafafa;
 }
 header .nav__button {
   display: none;
@@ -131,7 +137,7 @@ header .nav__list {
   flex: 1 1 auto;
 }
 header .nav__menu {
-  display: none;
+  display: block;
 }
 @media (min-width: 942px) {
   header .nav__menu {
@@ -141,6 +147,9 @@ header .nav__menu {
   }
 }
 
+.section-hero {
+  background-color: rgba(64, 66, 125, 0.05);
+}
 .section-hero__content {
   display: block;
 }
@@ -166,7 +175,7 @@ header .nav__menu {
 @media (min-width: 942px) {
   .section-hero__description {
     grid-template-rows: repeat(2, 1fr);
-    flex: 1.5;
+    flex: 2.5;
   }
 }
 .section-hero__description-heading, .section-hero__description-info {
@@ -178,7 +187,36 @@ header .nav__menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 23rem;
+  max-width: 28rem;
+}
+.section-hero__description-h2, .section-hero__description-h1 {
+  font-weight: 800;
+}
+.section-hero__description-h2::before {
+  content: "<h1>";
+  padding-right: 1rem;
+}
+.section-hero__description-h1::after {
+  content: "</h1>";
+}
+.section-hero__description-row1::before {
+  content: "<p>";
+  padding-right: 1rem;
+}
+.section-hero__description-row2::after {
+  content: "</p>";
+}
+.section-hero__description-row1, .section-hero__description-row2::after {
+  padding-left: 1rem;
+}
+.section-hero__description-h2::before, .section-hero__description-h1::after, .section-hero__description-row1::before, .section-hero__description-row2::after {
+  font-size: 1.3rem;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 200;
+  vertical-align: middle;
+}
+.section-hero__description-h1, .section-hero__description-row2, .section-hero__description-btns {
+  padding-left: 4.2rem;
 }
 
 .grid {
@@ -187,6 +225,9 @@ header .nav__menu {
   row-gap: 4rem;
   align-items: stretch;
   padding: 4rem 0 2rem 0;
+}
+.grid--bcd {
+  background: #fafafa;
 }
 @media (min-width: 640px) {
   .grid {
@@ -225,7 +266,9 @@ header .nav__menu {
 }
 
 .section-about {
-  padding-top: 3rem;
+  padding: 3rem 0;
+  background: #9695b7;
+  color: white;
 }
 .section-about__content {
   display: grid;
@@ -265,8 +308,7 @@ header .nav__menu {
 
 .footer {
   text-align: center;
-  background: linear-gradient(360deg, rgba(30, 18, 226, 0.95) 0%, rgba(46, 40, 180, 0.514583) 88.02%, rgba(65, 67, 126, 0) 100%);
-  background-blend-mode: multiply;
+  background-color: rgba(64, 66, 125, 0.05);
 }
 .footer__link {
   padding-right: 2rem;
@@ -297,7 +339,7 @@ header .nav__menu {
 }
 @media (min-width: 768px) {
   .section-hero__image {
-    flex: 3;
+    flex: 4;
     background: none;
   }
   .section-hero__image::before {

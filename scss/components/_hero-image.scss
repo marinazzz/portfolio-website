@@ -19,7 +19,7 @@
 	}
 
 	@include breakpoint-up("md") {
-		flex: 3;
+		flex: 4;
 		background: none;
 
 		&::before {

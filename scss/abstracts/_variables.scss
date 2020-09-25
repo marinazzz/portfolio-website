@@ -4,17 +4,24 @@
 $primary-btn-color: hsl(243, 100%, 69%);
 $secondary-btn-color: hsl(0, 0%, 100%);
 
-//cards #f5f5f5
+//cards
 $primary-card-color: hsl(0, 0%, 96%);
 $secondary-card-color: hsl(0, 0%, 98%);
 
 //links
 $primary-link-color: hsl(243, 100%, 69%);
 
-// Neutral
+// sections
 
-$primary-bcd-color: hsl(233, 8%, 62%);
-$secondary-bcd-color: hsl(0, 0%, 98%);
+$primary-bcd-color: rgb(64 66 125 / 5%);
+$secondary-bcd-color: rgb(250, 250, 250);
+$primary-bcd-color-contrast: hsl(242, 19%, 65%);
+
+$secondary-text-color: hsl(0, 0%, 100%);
+$primary-heading-color: #3f3d56;
+
+$primary-heading-color-contrast: hsl(243, 100%, 69%);
+
 $secondary-heading-color: hsl(220, 16%, 96%);
 $primary-txt-color: hsl(209, 23%, 22%);
 

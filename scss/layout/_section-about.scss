@@ -1,5 +1,7 @@
 .section-about {
-	padding-top: 3rem;
+	padding: 3rem 0;
+	background: $primary-bcd-color-contrast;
+	color: $secondary-text-color;
 
 	&__content {
 		display: grid;

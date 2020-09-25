@@ -15,8 +15,10 @@ main {
 }
 
 a {
-	color: white;
+	color: $primary-link-color;
 	text-decoration: none;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
 }
 
 p {

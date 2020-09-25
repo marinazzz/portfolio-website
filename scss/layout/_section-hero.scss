@@ -1,4 +1,6 @@
 .section-hero {
+	background-color: $primary-bcd-color;
+
 	&__content {
 		display: block;
 
@@ -16,7 +18,7 @@
 
 		@include breakpoint-up("lg") {
 			grid-template-rows: repeat(2, 1fr);
-			flex: 1.5;
+			flex: 2.5;
 		}
 
 		&-heading,
@@ -28,7 +30,51 @@
 
 		&-btns {
 			@include display-flex;
-			max-width: 23rem;
+			max-width: 28rem;
+		}
+
+		&-h2,
+		&-h1 {
+			font-weight: 800;
+		}
+
+		&-h2::before {
+			content: '<h1>';
+			padding-right: 1rem;
+		}
+
+		&-h1::after {
+			content: '</h1>';
+		}
+
+		&-row1::before {
+			content: '<p>';
+			padding-right: 1rem;
+		}
+
+		&-row2::after {
+			content: '</p>';
+		}
+
+		&-row1,
+		&-row2::after {
+			padding-left: 1rem;
+		}
+
+		&-h2::before,
+		&-h1::after,
+		&-row1::before,
+		&-row2::after {
+			font-size: 1.3rem;
+			font-family: 'Source Code Pro', monospace;
+			font-weight: 200;
+			vertical-align: middle;
+		}
+
+		&-h1,
+		&-row2,
+		&-btns {
+			padding-left: 4.2rem;
 		}
 	}
 }

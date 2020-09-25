@@ -17,3 +17,12 @@
 		padding: 2rem 0 0 0;
 	}
 }
+
+//helper class for headings
+.heading-accent {
+	color: $primary-heading-color-contrast;
+}
+
+.heading-neutral {
+	color: $secondary-heading-color;
+}
