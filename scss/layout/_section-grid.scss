@@ -1,21 +1,19 @@
 .grid {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	@include col-grid('one');
 	row-gap: 4rem;
 	align-items: stretch;
-	padding: 4rem 0 2rem 0;
+	padding: 4rem 0 3rem 0;
 
 	&--bcd {
 		background: $secondary-bcd-color;
 	}
 
 	@include breakpoint-up("xs") {
-		grid-template-columns: repeat(2, 1fr);
+		@include col-grid('two');
 		column-gap: 4rem;
-		row-gap: 4rem;
 	}
 
 	@include breakpoint-up("lg") {
-		grid-template-columns: repeat(3, 1fr);
+		@include col-grid('three');
 	}
 }

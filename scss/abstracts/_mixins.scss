@@ -21,9 +21,14 @@
 	align-items: center;
 }
 
-@mixin two-col-grid {
+@mixin col-grid ($number) {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(map-get($column, $number), 1fr);
+}
+
+@mixin row-grid ($number) {
+	display: grid;
+	grid-template-rows: repeat(map-get($row, $number), 1fr);
 }
 
 @mixin breakpoint-up($size) {

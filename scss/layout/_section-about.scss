@@ -4,29 +4,28 @@
 	color: $secondary-text-color;
 
 	&__content {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
+		@include col-grid('one');
 		row-gap: 2rem;
 		align-items: stretch;
 		padding-top: 4rem;
 
 		@include breakpoint-up("sm") {
-			grid-template-columns: repeat(2, 1fr);
+			@include col-grid('two');
 			column-gap: 6rem;
 		}
 
 		@include breakpoint-up("md") {
-			column-gap: 10rem;
+			column-gap: 12rem;
 		}
 
 		p {
-			padding-bottom: 2.5rem;
+			padding-bottom: 4.5rem;
 		}
 	}
 
 	&__icons {
 		display: grid;
-		grid-template-columns: repeat(1, 1fr);
+		@include col-grid('one');
 		row-gap: 1rem;
 		align-items: center;
 

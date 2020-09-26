@@ -1,3 +1,4 @@
+// main call to action button
 .primary-button {
 	padding: 0.7rem 1.6rem;
 	font-size: 1.2rem;
@@ -28,5 +29,62 @@
 @include breakpoint-down("md") {
 	.primary-button--center {
 		margin: 0 auto;
+	}
+}
+
+//dark mode toggle button
+.nav__items {
+	&-toggler,
+	&-btn {
+		display: block;
+		position: absolute;
+		top: 3rem;
+		width: 3.8rem;
+		height: 3.8rem;
+		border-radius: 50%;
+	}
+
+	&-toggler {
+		background-color: #222;
+		cursor: pointer;
+		z-index: 2;
+		box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+		transition: background-color 300ms;
+		will-change: transform;
+
+		&.dark {
+			background-color: #eee;
+
+			&:after {
+				content: "";
+				position: fixed;
+				width: 1.6rem;
+				height: 1.6rem;
+				left: 1.1rem;
+				background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/626120/sun.svg);
+			}
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 1.6rem;
+			height: 1.6rem;
+			left: 1.1rem;
+			top: 1.1rem;
+			background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/626120/moon_copy.svg) no-repeat;
+		}
+
+		&:hover {
+			background-color: #555;
+			transform: rotate(-10deg);
+		}
+	}
+
+	&-btn {
+		z-index: 1;
+		mix-blend-mode: difference;
+		transition: transform 1s ease;
+		outline: 0.1rem solid transparent;
 	}
 }

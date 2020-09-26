@@ -25,6 +25,13 @@ $primary-heading-color-contrast: hsl(243, 100%, 69%);
 $secondary-heading-color: hsl(220, 16%, 96%);
 $primary-txt-color: hsl(209, 23%, 22%);
 
+// BREAKPOINTS
+$breakpoints: ('xxs': '560px', 'xs': '640px', 'sm': '700px', 'md': '768px', 'lg': '942px', 'xl': '1200px');
+
+// grid number of columns/rows
+$column: ('one': 1, 'two': 2, 'three': 3);
+$row: ('one': 1, 'two': 2, 'three': 3, 'four': 4);
+
 //Dark Mode
 $dark-blue: hsl(209, 23%, 22%); //Elements
 $very-dark-blue: hsl(207, 26%, 17%); //Background
@@ -44,6 +51,3 @@ $md: 2rem;
 $lg: 3rem;
 $xl: 4rem;
 $xxl: 6rem;
-
-// BREAKPOINTS
-$breakpoints: ('xxs': '560px', 'xs': '640px', 'sm': '700px', 'md': '768px', 'lg': '942px', 'xl': '1200px');

@@ -1,12 +1,17 @@
 .section-contact {
-	background: url(../../assets/images/icons/Group.png);
+	padding: 3rem 0;
+	background: url(../../assets/images/icons/background-contact.section.svg);
 	background-repeat: no-repeat;
-	background-size: 60%;
-	background-position: 100%;
+	background-size: 100%;
+	background-position: center 94%;
+
+	@include breakpoint-up("md") {
+		background-size: 55%;
+		background-position: center right;
+	}
 
 	&__content {
-		display: grid;
-		grid-template-rows: repeat(2, 1fr);
+		@include row-grid('two');
 		row-gap: 2rem;
 
 		@include breakpoint-up("sm") {
