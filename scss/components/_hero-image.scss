@@ -7,18 +7,23 @@
 	background-position: center;
 
 	@include breakpoint-up("xxs") {
-		background-size: 97%;
+		min-height: 50rem;
+		// 	background-size: 97%;
 	}
 
 	@include breakpoint-up("xs") {
-		background-size: 87%;
+		min-height: 53rem;
+		// background-size: 90%;
 	}
 
 	@include breakpoint-up("sm") {
-		background-size: 79%;
+		min-height: 55rem;
+		background-size: contain;
+		// background-size: 85%;
 	}
 
 	@include breakpoint-up("md") {
+		min-height: 57rem;
 		flex: 4;
 		background: none;
 
@@ -28,30 +33,23 @@
 			height: 100%;
 			width: 100%;
 			background: url(../../assets/images/icons/hero-img-tablet.svg);
-			background-size: 100%;
+			background-size: contain;
 			background-repeat: no-repeat;
-			background-position: center center;
+			background-position: center;
 
 			@include breakpoint-up("lg") {
-				width: 80rem;
-				background-size: 90%;
+				width: 65rem;
+				background-position: right;
 			}
 		}
 	}
 
 	@include breakpoint-up("lg") {
-		min-height: 60rem;
+		min-height: 70rem;
 	}
 
 	@include breakpoint-up("xl") {
 		&::before {
-			content: '';
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			background: url(../../assets/images/icons/hero-img-tablet.svg);
-			background-size: 96%;
-			background-repeat: no-repeat;
 			background-position: center bottom;
 
 			@include breakpoint-up("xl") {

@@ -1,9 +1,11 @@
 .grid__card {
-	font-size: 1.5rem;
+	@include display-flex;
+	flex-direction: column;
+	align-items: stretch;
 	color: $primary-txt-color;
 	border-radius: 0.5rem;
 	box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.14), 0 0.2rem 0.1rem rgba(0, 0, 0, 0.12),
-		0 0.1rem 3px rgba(0, 0, 0, 0.2);
+		0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
 
 	&-graphic {
 		width: auto;
@@ -15,21 +17,26 @@
 	}
 
 	&-text {
-		padding: 3rem;
+		padding: 2rem;
 
 		&--links {
 			@include display-flex;
+			padding: 1.5rem 3rem;
 			font-weight: 800;
 			letter-spacing: 0.2rem;
 			background: $primary-card-color;
 
 			a {
 				color: $primary-link-color;
+
+				&:hover {
+					color: darken(hsl(243, 100%, 69%), 20);
+				}
 			}
 		}
 
 		h3 {
-			padding-bottom: 2rem;
+			padding-bottom: 1.5rem;
 		}
 	}
 }

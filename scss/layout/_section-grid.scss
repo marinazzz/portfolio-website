@@ -1,19 +1,31 @@
 .grid {
 	@include col-grid('one');
-	row-gap: 4rem;
+	row-gap: 2rem;
 	align-items: stretch;
 	padding: 4rem 0 3rem 0;
 
 	&--bcd {
 		background: $secondary-bcd-color;
+		position: relative;
+		padding: 2rem 0;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 10.5rem;
+			height: 10rem;
+			background: url(../../assets/images/icons/polygon-3-left.svg) no-repeat;
+			transform: translate(-45%, 0);
+		}
 	}
 
 	@include breakpoint-up("xs") {
 		@include col-grid('two');
-		column-gap: 4rem;
+		column-gap: 2rem;
 	}
 
 	@include breakpoint-up("lg") {
 		@include col-grid('three');
+		column-gap: 3rem;
+		row-gap: 3rem;
 	}
 }

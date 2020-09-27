@@ -26,18 +26,22 @@ h1 {
 h2 {
 	font-size: 3rem;
 	@include breakpoint-up("lg") {
-		font-size: 4.2rem;
+		font-size: 4rem;
 	}
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 
-	@include breakpoint-up("lg") {
-		font-size: 1.8rem;
+	@include breakpoint-up("xl") {
+		font-size: 2rem;
 	}
 }
 
 p {
-	line-height: 2.7rem;
+	line-height: 2.5rem;
+
+	@include breakpoint-up("md") {
+		font-size: 1.4rem;
+	}
 }

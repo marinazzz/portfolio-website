@@ -38,7 +38,7 @@
 	&-btn {
 		display: block;
 		position: absolute;
-		top: 3rem;
+		transform: translate(25%, -50%);
 		width: 3.8rem;
 		height: 3.8rem;
 		border-radius: 50%;
@@ -49,8 +49,7 @@
 		cursor: pointer;
 		z-index: 2;
 		box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
-		transition: background-color 300ms;
-		will-change: transform;
+		transition: all 0.2s ease;
 
 		&.dark {
 			background-color: #eee;
@@ -66,7 +65,7 @@
 		}
 
 		&:after {
-			content: "";
+			content: '';
 			position: absolute;
 			width: 1.6rem;
 			height: 1.6rem;
@@ -77,14 +76,12 @@
 
 		&:hover {
 			background-color: #555;
-			transform: rotate(-10deg);
 		}
 	}
 
 	&-btn {
 		z-index: 1;
-		mix-blend-mode: difference;
-		transition: transform 1s ease;
+		transition: all 0.2s ease;
 		outline: 0.1rem solid transparent;
 	}
 }

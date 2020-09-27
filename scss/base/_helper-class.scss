@@ -14,10 +14,17 @@
 }
 
 //helper class for headings
-.heading-accent {
-	color: $primary-heading-color-contrast;
-}
 
-.heading-neutral {
-	color: $secondary-heading-color;
+.section-heading {
+	text-align: center;
+
+	@include breakpoint-up("md") {
+		text-align: left;
+	}
+	&--accent {
+		color: $primary-heading-color-contrast;
+	}
+	&--neutral {
+		color: $secondary-heading-color;
+	}
 }

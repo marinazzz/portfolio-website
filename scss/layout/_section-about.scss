@@ -1,40 +1,63 @@
 .section-about {
-	padding: 3rem 0;
+	padding: 2rem 0;
 	background: $primary-bcd-color-contrast;
 	color: $secondary-text-color;
+	position: relative;
+	&::before {
+		// content: '';
+		position: absolute;
+		width: 10.5rem;
+		height: 12rem;
+		background: url(../../assets/images/icons/polygon-3-right.svg) no-repeat;
+	}
 
 	&__content {
 		@include col-grid('one');
-		row-gap: 2rem;
+		row-gap: 3rem;
 		align-items: stretch;
 		padding-top: 4rem;
 
 		@include breakpoint-up("sm") {
 			@include col-grid('two');
+			column-gap: 2rem;
+		}
+
+		@include breakpoint-up("lg") {
 			column-gap: 6rem;
-		}
-
-		@include breakpoint-up("md") {
-			column-gap: 12rem;
-		}
-
-		p {
-			padding-bottom: 4.5rem;
 		}
 	}
 
-	&__icons {
-		display: grid;
-		@include col-grid('one');
-		row-gap: 1rem;
-		align-items: center;
+	&__text {
+		padding-bottom: 5.5rem;
+	}
 
-		@include breakpoint-up("lg") {
-			row-gap: 3rem;
+	&__icons {
+		@include display-flex;
+		justify-content: end;
+		align-items: baseline;
+
+		> div:nth-child(1) {
+			align-self: flex-end;
+		}
+
+		> div:nth-child(2) {
+			align-self: center;
 		}
 
 		&-wrapp {
-			justify-self: center;
+			flex: 1;
+
+			img {
+				max-width: 3.5rem;
+				margin: 0 auto;
+			}
+
+			h3 {
+				margin: 2rem 0 0;
+				font-size: 1.8rem;
+				font-weight: 700;
+				text-align: center;
+			}
 		}
 	}
 }

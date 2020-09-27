@@ -1,4 +1,5 @@
 .section-hero {
+	position: relative;
 	background-color: $primary-bcd-color;
 
 	&__content {
@@ -12,6 +13,7 @@
 
 	&__description {
 		@include padding-wrapper;
+		padding-right: 0;
 		@include row-grid('one');
 		row-gap: 2rem;
 		align-items: center;
@@ -30,6 +32,19 @@
 		&-btns {
 			@include display-flex;
 			max-width: 28rem;
+		}
+
+		&-icon {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 2.6rem;
+			height: 2.8rem;
+			background: url(../../assets/images/icons/arrpw-down.svg);
+			background-repeat: no-repeat;
+			background-size: 95%;
+			transition: all 0.2s ease-in-out;
 		}
 
 		&-h2,

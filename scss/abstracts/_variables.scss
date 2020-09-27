@@ -5,20 +5,19 @@ $primary-btn-color: hsl(243, 100%, 69%);
 $secondary-btn-color: hsl(0, 0%, 100%);
 
 //cards
-$primary-card-color: hsl(0, 0%, 96%);
-$secondary-card-color: hsl(0, 0%, 98%);
+$primary-card-color: hsl(0, 0%, 93%);
+$secondary-card-color: hsl(0, 0%, 4%);
 
 //links
 $primary-link-color: hsl(243, 100%, 69%);
 
 // sections
-
 $primary-bcd-color: rgb(64 66 125 / 5%);
 $secondary-bcd-color: rgb(250, 250, 250);
 $primary-bcd-color-contrast: hsl(242, 19%, 65%);
 
 $secondary-text-color: hsl(0, 0%, 100%);
-$primary-heading-color: #3f3d56;
+$primary-heading-color: hsl(245, 17%, 29%);
 
 $primary-heading-color-contrast: hsl(243, 100%, 69%);
 
@@ -43,11 +42,3 @@ $light-gray: hsla(0, 5%, 65%, 0.439); //Input outline
 $very-light-gray: hsl(0, 0%, 98%); //Background
 
 $white: hsl(0, 0%, 100%); //Dark Mode Text & Light Mode Elements
-
-//PADDING
-$xs: 0.5rem;
-$sm: 1.4rem;
-$md: 2rem;
-$lg: 3rem;
-$xl: 4rem;
-$xxl: 6rem;
