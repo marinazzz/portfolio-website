@@ -18,7 +18,7 @@
 .section-heading {
 	text-align: center;
 
-	@include breakpoint-up("md") {
+	@include breakpoint-up("xl") {
 		text-align: left;
 	}
 	&--accent {

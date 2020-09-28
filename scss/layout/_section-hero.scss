@@ -20,13 +20,19 @@
 
 		@include breakpoint-up("lg") {
 			@include row-grid('two');
-			flex: 2.5;
+			flex: 3;
 		}
 
 		&-heading,
 		&-info {
 			@include row-grid('two');
 			row-gap: 0.6rem;
+		}
+
+		&-info {
+			@include breakpoint-down("md") {
+				padding-bottom: 2rem;
+			}
 		}
 
 		&-btns {
@@ -41,10 +47,8 @@
 			transform: translate(-50%, -50%);
 			width: 2.6rem;
 			height: 2.8rem;
-			background: url(../../assets/images/icons/arrpw-down.svg);
-			background-repeat: no-repeat;
-			background-size: 95%;
 			transition: all 0.2s ease-in-out;
+			background: no-repeat center/95% url(../../assets/images/icons/arrpw-down.svg);
 		}
 
 		&-h2,

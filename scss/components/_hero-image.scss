@@ -1,10 +1,7 @@
 .section-hero__image {
 	position: relative;
 	min-height: 47rem;
-	background: url(../../assets/images/icons/hero-img-tablet.svg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	background: no-repeat center/cover url(../../assets/images/icons/hero-img-tablet.svg);
 
 	@include breakpoint-up("xxs") {
 		min-height: 50rem;
@@ -32,10 +29,7 @@
 			position: absolute;
 			height: 100%;
 			width: 100%;
-			background: url(../../assets/images/icons/hero-img-tablet.svg);
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
+			background: no-repeat center/contain url(../../assets/images/icons/hero-img-tablet.svg);
 
 			@include breakpoint-up("lg") {
 				width: 65rem;

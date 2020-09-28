@@ -1,14 +1,17 @@
 .section-contact {
 	padding-bottom: 10rem;
-	background: url(../../assets/images/icons/background-contact.section.svg);
-	background-repeat: no-repeat;
+	background: no-repeat url(../../assets/images/icons/background-contact.section.svg);
 	background-size: 100%;
 	background-position: center 94%;
 
 	@include breakpoint-up("xxs") {
 		padding-bottom: 0;
-		background-size: 50%;
+		background-size: 65%;
 		background-position: center right;
+	}
+
+	@include breakpoint-up("lg") {
+		background-size: 50%;
 	}
 
 	&__content {
