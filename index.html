@@ -9,8 +9,9 @@
         <title>Marina Zujic</title>
     </head>
 
-    <body>
+    <body id="body">
         <header>
+            <div class="overlay"></div>
             <nav class="nav container">
                 <div class="nav__items">
                     <div>
@@ -22,21 +23,27 @@
                     <button class="nav__button">
                         <div class="nav__button-item">
                         </div>
+                        <div class="nav__button-item">
+                        </div>
+                        <div class="nav__button-item">
+                        </div>
                     </button>
-                    <ul class="nav__menu">
-                        <li class="nav__menu-item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="nav__menu-item">
-                            <a href="#">Portfolio</a>
-                        </li>
-                        <li class="nav__menu-item">
-                            <a href="#">About</a>
-                        </li>
-                        <li class="nav__menu-item">
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
+                    <div class="nav__list-wrapp">
+                        <ul class="nav__menu">
+                            <li class="nav__menu-item">
+                                <a href="#body">Home</a>
+                            </li>
+                            <li class="nav__menu-item">
+                                <a href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="nav__menu-item">
+                                <a href="#about">About</a>
+                            </li>
+                            <li class="nav__menu-item">
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -187,7 +194,7 @@
                 </div>
                 </div>
             </section>
-            <section class="section-about">
+            <section class="section-about" id="about">
                 <div class="container container--display-block">
                     <h2 class="section-heading">About
                         <span class="section-heading--neutral">Me</span>
@@ -220,7 +227,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-contact">
+            <section class="section-contact" id="contact">
                 <div class="container container--display-block">
                     <div class="section-contact__content">
                         <h2>Get
