@@ -96,6 +96,15 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 1.7rem;
+}
+@media (min-width: 1200px) {
+  h4 {
+    font-size: 1.9rem;
+  }
+}
+
 p {
   line-height: 2.5rem;
 }
@@ -151,6 +160,61 @@ p {
 }
 .overlay--active {
   display: block;
+}
+
+.link-main-hover:hover {
+  color: #0c00fa;
+}
+
+body.dark-mode {
+  background-color: #212121;
+  color: whitesmoke;
+}
+body.dark-mode header, body.dark-mode header .nav__menu, body.dark-mode header .nav__list-wrapp, body.dark-mode .section-hero, body.dark-mode .section-about, body.dark-mode footer {
+  background-color: inherit;
+}
+body.dark-mode .grid--bcd, body.dark-mode .section-contact, body.dark-mode header .nav__list-wrapp--open {
+  background-color: #262626;
+}
+body.dark-mode h1, body.dark-mode h2 {
+  color: whitesmoke;
+}
+body.dark-mode h3 {
+  color: #ebebeb;
+}
+body.dark-mode p, body.dark-mode h4 {
+  color: #d9d9d9;
+}
+body.dark-mode .section-heading--neutral {
+  color: #6961ff;
+}
+body.dark-mode a, body.dark-mode .grid__card-text--links a, body.dark-mode .footer__link, body.dark-mode .primary-button, body.dark-mode .primary-button--ghost {
+  color: #9994ff;
+}
+body.dark-mode a:hover, body.dark-mode .grid__card-text--links a:hover, body.dark-mode .footer__link:hover, body.dark-mode .primary-button:hover, body.dark-mode .primary-button--ghost:hover {
+  color: #cac7ff;
+}
+body.dark-mode .primary-button {
+  color: #060606;
+}
+body.dark-mode .primary-button--ghost {
+  color: #9994ff;
+  border: 0.1rem #9994ff solid;
+}
+body.dark-mode .grid__card {
+  background-color: #383838;
+}
+body.dark-mode .grid__card-text--links {
+  background-color: #404040;
+}
+body.dark-mode .grid__card-graphic-item {
+  filter: opacity(0.9);
+}
+body.dark-mode .section-hero__image, body.dark-mode .section-hero__image::before {
+  opacity: 0.7;
+}
+body.dark-mode .section-about__icons-wrapp img {
+  filter: contrast(0.2);
 }
 
 header {
@@ -451,7 +515,7 @@ header .nav__menu-item {
   max-width: 3.5rem;
   margin: 0 auto;
 }
-.section-about__icons-wrapp h3 {
+.section-about__icons-wrapp h4 {
   margin: 2rem 0 0;
   font-size: 1.8rem;
   font-weight: 700;
@@ -461,7 +525,6 @@ header .nav__menu-item {
 .footer {
   text-align: center;
   background-color: rgba(64, 66, 125, 0.05);
-  margin-top: 2rem;
 }
 .footer__link {
   padding-right: 2rem;
@@ -536,12 +599,13 @@ header .nav__menu-item {
   align-items: center;
   flex-direction: column;
   align-items: stretch;
-  color: #2b3945;
+  color: #111517;
   border-radius: 0.5rem;
   box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.14), 0 0.2rem 0.1rem rgba(0, 0, 0, 0.12), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
 }
 .grid__card-graphic {
   width: auto;
+  border-bottom: 0.2rem rgba(0, 0, 0, 0.12) solid;
 }
 .grid__card-graphic-item {
   width: 100%;
@@ -556,6 +620,7 @@ header .nav__menu-item {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   font-weight: 800;
   letter-spacing: 0.2rem;
   background: #ededed;
@@ -609,14 +674,14 @@ header .nav__menu-item {
   border-radius: 50%;
 }
 .nav__items-toggler {
-  background-color: #222;
+  background-color: #262626;
   cursor: pointer;
   z-index: 2;
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
 }
 .nav__items-toggler.dark {
-  background-color: #eee;
+  background-color: #fafafa;
 }
 .nav__items-toggler.dark:after {
   content: "";
@@ -636,7 +701,7 @@ header .nav__menu-item {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/626120/moon_copy.svg) no-repeat;
 }
 .nav__items-toggler:hover {
-  background-color: #555;
+  background-color: #454545;
 }
 .nav__items-btn {
   z-index: 1;

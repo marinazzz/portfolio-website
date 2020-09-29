@@ -9,6 +9,7 @@
 
 	&-graphic {
 		width: auto;
+		border-bottom: 0.2rem $secondary-border-card-color solid;
 
 		&-item {
 			width: 100%;
@@ -23,13 +24,13 @@
 		&--links {
 			@include display-flex;
 			padding: 1.5rem 3rem;
+			border-radius: 0 0 0.5rem 0.5rem;
 			font-weight: 800;
 			letter-spacing: 0.2rem;
 			background: $primary-card-color;
 
 			a {
 				color: $primary-link-color;
-
 				&:hover {
 					color: darken(hsl(243, 100%, 69%), 20);
 				}

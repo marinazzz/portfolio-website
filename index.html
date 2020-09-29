@@ -34,16 +34,16 @@
                     <div class="nav__list-wrapp">
                         <ul class="nav__menu">
                             <li class="nav__menu-item">
-                                <a href="#body">Home</a>
+                                <a class="link-main-hover" href="#body">Home</a>
                             </li>
                             <li class="nav__menu-item">
-                                <a href="#portfolio">Portfolio</a>
+                                <a class="link-main-hover" href="#portfolio">Portfolio</a>
                             </li>
                             <li class="nav__menu-item">
-                                <a href="#about">About</a>
+                                <a class="link-main-hover" href="#about">About</a>
                             </li>
                             <li class="nav__menu-item">
-                                <a href="#contact">Contact</a>
+                                <a class="link-main-hover" href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -73,10 +73,10 @@
                                 </p>
                             </div>
                             <div class="section-hero__description-btns">
-                                <button class="primary-button">
-                                    CONTACT</button>
-                                <button class="primary-button primary-button--ghost">
-                                    PORTFOLIO</button>
+                                <a href="#contact" class="primary-button">
+                                    CONTACT</a>
+                                <a href="#portfolio" class="primary-button primary-button--ghost">
+                                    PORTFOLIO</a>
                             </div>
                             <a href="#portfolio" class="section-hero__description-icon">
                             </a>
@@ -160,6 +160,22 @@
                         <div class="grid__card">
                             <div class="grid__card-graphic">
                                 <img class="grid__card-graphic-item"
+                                    src="assets/images/demo-images/restaurant-marinaz-demo.jpg" alt="" />
+                            </div>
+                            <div class="grid__card-text">
+                                <h3>Restaurant Landing Page</h3>
+                                <p>Custom elegant Bootstrap landing page for restaurants and catering companies to
+                                    display offer and contact info.
+                                </p>
+                            </div>
+                            <div class="grid__card-text grid__card-text--links">
+                                <a href="https://marinazzz.github.io/restaurant-website/" target="_blank">DEMO</a>
+                                <a href="https://github.com/marinazzz/restaurant-website" target="_blank">SOURCE</a>
+                            </div>
+                        </div>
+                        <div class="grid__card">
+                            <div class="grid__card-graphic">
+                                <img class="grid__card-graphic-item"
                                     src="assets/images/demo-images/easybank-landing-oage-marinaz-demo.jpg" alt="" />
                             </div>
                             <div class="grid__card-text">
@@ -174,25 +190,10 @@
                                 <a href="https://github.com/marinazzz/bank-landing-page" target="_blank">SOURCE</a>
                             </div>
                         </div>
-                        <div class="grid__card">
-                            <div class="grid__card-graphic">
-                                <img class="grid__card-graphic-item"
-                                    src="assets/images/demo-images/restaurant-marinaz-demo.jpg" alt="" />
-                            </div>
-                            <div class="grid__card-text">
-                                <h3>Restaurant Landing Page</h3>
-                                <p>Custom elegant Bootstrap landing page for restaurants and catering companies to
-                                    display offer and contact info.
-                                </p>
-                            </div>
-                            <div class="grid__card-text grid__card-text--links">
-                                <a href="https://marinazzz.github.io/restaurant-website/" target="_blank">DEMO</a>
-                                <a href="https://github.com/marinazzz/restaurant-website" target="_blank">SOURCE</a>
-                            </div>
-                        </div>
+
                     </div>
                     <a class="primary-button primary-button--center"
-                        href="https://github.com/marinazzz?tab=repositories" role="button">
+                        href="https://github.com/marinazzz?tab=repositories">
                         SEE MORE</a>
                 </div>
                 </div>
@@ -209,22 +210,21 @@
                                 perferendis quae iure quidem atque, at sit itaque ea eos asperiores, impedit fugit
                                 corporis
                                 ullam nulla dolor cupiditate.</p>
-                            <a class="primary-button" href="" download="" role="
-                                button">
+                            <a class="primary-button" href="" download="">
                                 DOWNLOAD CV</a>
                         </div>
                         <div class="section-about__icons">
                             <div class="section-about__icons-wrapp">
                                 <img src="assets/images/icons/html.svg" alt="" srcset="" />
-                                <h3>HTML</h3>
+                                <h4>HTML</h4>
                             </div>
                             <div class="section-about__icons-wrapp">
                                 <img src="assets/images/icons/css.svg" alt="" srcset="" />
-                                <h3>CSS</h3>
+                                <h4>CSS</h4>
                             </div>
                             <div class="section-about__icons-wrapp">
                                 <img src="assets/images/icons/js.svg" alt="" srcset="" />
-                                <h3>JavaScript</h3>
+                                <h4>JavaScript</h4>
                             </div>
                         </div>
                     </div>
@@ -261,7 +261,8 @@
         </main>
         <footer class="footer">
             <div class="container container--display-block">
-                <a class="footer__link" href="https://github.com/marinazzz" target="_blank">© Marina Zujic</a>
+                <a class="footer__link link-main-hover" href="https://github.com/marinazzz" target="_blank">© Marina
+                    Zujic</a>
                 <span class="footer__link">
                     All Rights Reserved
                 </span>

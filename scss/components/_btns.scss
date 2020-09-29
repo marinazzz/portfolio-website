@@ -45,14 +45,14 @@
 	}
 
 	&-toggler {
-		background-color: #222;
+		background-color: $components-bcd;
 		cursor: pointer;
 		z-index: 2;
 		box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
 		transition: all 0.2s ease;
 
 		&.dark {
-			background-color: #eee;
+			background-color: $secondary-bcd-color;
 
 			&:after {
 				content: "";
@@ -75,7 +75,7 @@
 		}
 
 		&:hover {
-			background-color: #555;
+			background-color: lighten(#121212, 20%);
 		}
 	}
 

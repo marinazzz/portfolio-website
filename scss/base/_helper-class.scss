@@ -44,3 +44,11 @@
 		display: block;
 	}
 }
+
+//helper for links shared style
+
+.link-main-hover {
+	&:hover {
+		color: darken(hsl(243, 100%, 69%), 20);
+	}
+}

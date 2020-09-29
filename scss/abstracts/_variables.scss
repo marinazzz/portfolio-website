@@ -1,5 +1,7 @@
 //COLORS
 
+//Light Mode
+
 // buttons
 $primary-btn-color: hsl(243, 100%, 69%);
 $secondary-btn-color: hsl(0, 0%, 100%);
@@ -7,6 +9,7 @@ $secondary-btn-color: hsl(0, 0%, 100%);
 //cards
 $primary-card-color: hsl(0, 0%, 93%);
 $secondary-card-color: hsl(0, 0%, 4%);
+$secondary-border-card-color: hsla(0, 0%, 0%, 0.12);
 
 //links
 $primary-link-color: hsl(243, 100%, 69%);
@@ -17,12 +20,29 @@ $secondary-bcd-color: rgb(250, 250, 250);
 $primary-bcd-color-contrast: hsl(242, 19%, 65%);
 
 $secondary-text-color: hsl(0, 0%, 100%);
+$primary-txt-color: hsl(200, 15%, 8%);
+
 $primary-heading-color: hsl(245, 17%, 29%);
-
 $primary-heading-color-contrast: hsl(243, 100%, 69%);
-
 $secondary-heading-color: hsl(220, 16%, 96%);
-$primary-txt-color: hsl(209, 23%, 22%);
+
+//Dark Mode
+$body-bcd: lighten(#121212, 6%);
+$text-on-body-bcd: darken(#ffffff, 4%);
+
+$components-bcd: lighten(#121212, 8%);
+$components-bcd-light: lighten(#121212, 10%);
+
+$text-on-components: darken(#ffffff, 15%);
+$heading-on-components: darken(#ffffff, 8%);
+
+$text-on-buttons: #060606;
+$text-on-buttons-light: #9994ff;
+
+$color-links: #9994ff;
+
+$card-bcd: lighten(#121212, 15%);
+$card-bcd-light-row: lighten(#121212, 18%);
 
 // BREAKPOINTS
 $breakpoints: ('xxs': '560px', 'xs': '640px', 'sm': '700px', 'md': '768px', 'lg': '942px', 'xl': '1200px');
@@ -30,15 +50,3 @@ $breakpoints: ('xxs': '560px', 'xs': '640px', 'sm': '700px', 'md': '768px', 'lg'
 // grid number of columns/rows
 $column: ('one': 1, 'two': 2, 'three': 3);
 $row: ('one': 1, 'two': 2, 'three': 3, 'four': 4);
-
-//Dark Mode
-$dark-blue: hsl(209, 23%, 22%); //Elements
-$very-dark-blue: hsl(207, 26%, 17%); //Background
-
-//Light Mode
-$very-dark-blue-text: hsl(200, 15%, 8%); //Text
-$dark-gray: hsl(0, 0%, 52%); //Input
-$light-gray: hsla(0, 5%, 65%, 0.439); //Input outline
-$very-light-gray: hsl(0, 0%, 98%); //Background
-
-$white: hsl(0, 0%, 100%); //Dark Mode Text & Light Mode Elements

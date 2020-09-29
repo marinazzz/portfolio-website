@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	color: $very-dark-blue-text;
+	color: $primary-txt-color;
 	font-size: 1.6rem;
 }
 
@@ -35,6 +35,14 @@ h3 {
 
 	@include breakpoint-up("xl") {
 		font-size: 2rem;
+	}
+}
+
+h4 {
+	font-size: 1.7rem;
+
+	@include breakpoint-up("xl") {
+		font-size: 1.9rem;
 	}
 }
 

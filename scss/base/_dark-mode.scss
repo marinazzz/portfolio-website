@@ -1,0 +1,83 @@
+body.dark-mode {
+	background-color: $body-bcd;
+	color: $text-on-body-bcd;
+
+	//sections
+	& header,
+	& header .nav__menu,
+	& header .nav__list-wrapp,
+	& .section-hero,
+	& .section-about,
+	& footer {
+		background-color: inherit;
+	}
+
+	& .grid--bcd,
+	& .section-contact,
+	& header .nav__list-wrapp--open {
+		background-color: $components-bcd;
+	}
+	//typography
+	& h1,
+	& h2 {
+		color: $text-on-body-bcd;
+	}
+
+	& h3 {
+		color: $heading-on-components;
+	}
+
+	& p,
+	& h4 {
+		color: $text-on-components;
+	}
+
+	& .section-heading--neutral {
+		color: $primary-heading-color-contrast;
+	}
+
+	//links
+	& a,
+	& .grid__card-text--links a,
+	& .footer__link,
+	& .primary-button,
+	& .primary-button--ghost {
+		color: $color-links;
+
+		&:hover {
+			color: lighten($color: #9994ff, $amount: 10);
+		}
+	}
+
+	& .primary-button {
+		color: $text-on-buttons;
+	}
+
+	& .primary-button--ghost {
+		color: $text-on-buttons-light;
+		border: 0.1rem $text-on-buttons-light solid;
+	}
+
+	//cards
+	& .grid__card {
+		background-color: $card-bcd;
+	}
+
+	& .grid__card-text--links {
+		background-color: $card-bcd-light-row;
+	}
+
+	//graphics
+	& .grid__card-graphic-item {
+		filter: opacity(0.9);
+	}
+
+	& .section-hero__image,
+	& .section-hero__image::before {
+		opacity: 0.7;
+	}
+
+	& .section-about__icons-wrapp img {
+		filter: contrast(0.2);
+	}
+}

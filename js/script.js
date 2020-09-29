@@ -54,9 +54,5 @@ darkModeToggler.addEventListener('click', () => {
 
     darkModeBtn.classList.toggle('clicked');
     darkModeToggler.classList.toggle('dark');
-    // document.body.classList.toggle('dark-mode');
-
-    // document.body.classList.contains('dark-mode') ?
-    //     darkModeBtn.classList.toggle('clicked') :
-    //     darkModeToggler.classList.toggle('dark');
+    document.body.classList.toggle('dark-mode');
 })
