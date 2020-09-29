@@ -8,12 +8,12 @@
 		position: absolute;
 		width: 10.5rem;
 		height: 12rem;
-		background: url(../../assets/images/icons/polygon-3-right.svg) no-repeat;
+		background: url(assets/images/icons/polygon-3-right.svg) no-repeat;
 	}
 
 	&__content {
 		@include col-grid('one');
-		row-gap: 3rem;
+		row-gap: 4rem;
 		align-items: stretch;
 		padding-top: 4rem;
 
@@ -28,7 +28,7 @@
 	}
 
 	&__text {
-		padding-bottom: 5.5rem;
+		padding-bottom: 5rem;
 	}
 
 	&__icons {
