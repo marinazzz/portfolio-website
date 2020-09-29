@@ -3,12 +3,14 @@
 	background: $primary-bcd-color-contrast;
 	color: $secondary-text-color;
 	position: relative;
+
+	// to do: fix position of polygon
 	&::before {
 		// content: '';
 		position: absolute;
 		width: 10.5rem;
 		height: 12rem;
-		background: url(assets/images/icons/polygon-3-right.svg) no-repeat;
+		background: url(../assets/images/icons/polygon-3-right.svg) no-repeat;
 	}
 
 	&__content {
