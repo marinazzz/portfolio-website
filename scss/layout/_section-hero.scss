@@ -49,6 +49,7 @@
 
 		&-h1 {
 			display: inline-flex;
+			animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 		}
 
 		&-h1::before {
