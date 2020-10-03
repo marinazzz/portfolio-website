@@ -1,22 +1,19 @@
 .section-hero__image {
 	position: relative;
-	min-height: 47rem;
+	min-height: 35rem;
 	background: no-repeat center/cover url(../assets/images/icons/hero-img-tablet.svg);
 
 	@include breakpoint-up("xxs") {
 		min-height: 50rem;
-		// 	background-size: 97%;
 	}
 
 	@include breakpoint-up("xs") {
 		min-height: 53rem;
-		// background-size: 90%;
 	}
 
 	@include breakpoint-up("sm") {
 		min-height: 55rem;
 		background-size: contain;
-		// background-size: 85%;
 	}
 
 	@include breakpoint-up("md") {
@@ -39,7 +36,7 @@
 	}
 
 	@include breakpoint-up("lg") {
-		min-height: 70rem;
+		min-height: 66rem;
 	}
 
 	@include breakpoint-up("xl") {

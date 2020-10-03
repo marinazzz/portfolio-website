@@ -71,29 +71,37 @@ h4 {
 
 h1 {
   font-size: 3.2rem;
+  line-height: 5rem;
 }
 @media (min-width: 942px) {
   h1 {
     font-size: 5rem;
+    line-height: 8rem;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.2rem;
+    line-height: 6.5rem;
   }
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.9rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3.3rem;
+  }
 }
 @media (min-width: 942px) {
   h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
 h3 {
-  font-size: 1.8rem;
-}
-@media (min-width: 1200px) {
-  h3 {
-    font-size: 2rem;
-  }
+  font-size: 2rem;
 }
 
 h4 {
@@ -107,11 +115,6 @@ h4 {
 
 p {
   line-height: 2.5rem;
-}
-@media (min-width: 768px) {
-  p {
-    font-size: 1.4rem;
-  }
 }
 
 .container {
@@ -174,7 +177,7 @@ body.dark-mode header, body.dark-mode header .nav__menu, body.dark-mode header .
   background-color: inherit;
 }
 body.dark-mode .grid--bcd, body.dark-mode .section-contact, body.dark-mode header .nav__list-wrapp--open {
-  background-color: #262626;
+  background-color: #292929;
 }
 body.dark-mode h1, body.dark-mode h2 {
   color: whitesmoke;
@@ -186,7 +189,13 @@ body.dark-mode p, body.dark-mode h4 {
   color: #d9d9d9;
 }
 body.dark-mode .section-heading--neutral {
-  color: #6961ff;
+  color: #9994ff;
+}
+body.dark-mode .section-hero__description-h1::before, body.dark-mode .section-hero__description-h1::after, body.dark-mode .section-hero__description-row1::before, body.dark-mode .section-hero__description-row2::after {
+  color: gray;
+}
+body.dark-mode .section-heading--accent {
+  color: #9994ff;
 }
 body.dark-mode a, body.dark-mode .grid__card-text--links a, body.dark-mode .footer__link, body.dark-mode .primary-button, body.dark-mode .primary-button--ghost {
   color: #9994ff;
@@ -196,10 +205,15 @@ body.dark-mode a:hover, body.dark-mode .grid__card-text--links a:hover, body.dar
 }
 body.dark-mode .primary-button {
   color: #060606;
+  background-color: #9994ff;
 }
 body.dark-mode .primary-button--ghost {
   color: #9994ff;
+  background-color: inherit;
   border: 0.1rem #9994ff solid;
+}
+body.dark-mode .primary-button--ghost:hover {
+  background-color: #9994ff;
 }
 body.dark-mode .grid__card {
   background-color: #383838;
@@ -302,7 +316,6 @@ header .nav__menu-item {
 }
 .section-hero__description {
   padding: 3rem 2rem;
-  padding-right: 0;
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   row-gap: 2rem;
@@ -320,7 +333,7 @@ header .nav__menu-item {
     flex: 3;
   }
 }
-.section-hero__description-heading, .section-hero__description-info {
+.section-hero__description-info {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   row-gap: 0.6rem;
@@ -344,17 +357,30 @@ header .nav__menu-item {
   width: 2.6rem;
   height: 2.8rem;
   transition: all 0.2s ease-in-out;
-  background: no-repeat center/95% url(../../assets/images/icons/arrpw-down.svg);
+  background: no-repeat center/95% url(../assets/images/icons/arrpw-down.svg);
 }
-.section-hero__description-h2, .section-hero__description-h1 {
-  font-weight: 800;
+.section-hero__description-h1 {
+  display: inline-flex;
 }
-.section-hero__description-h2::before {
+.section-hero__description-h1::before {
   content: "<h1>";
-  padding-right: 1rem;
+  align-self: baseline;
+  padding: 1.2rem 1rem 0 0;
+}
+@media (min-width: 942px) {
+  .section-hero__description-h1::before {
+    padding: 2.1rem 1rem 0 0;
+  }
 }
 .section-hero__description-h1::after {
   content: "</h1>";
+  align-self: flex-end;
+  padding: 0 0 1rem 1rem;
+}
+@media (min-width: 942px) {
+  .section-hero__description-h1::after {
+    padding: 0 0 1.8rem 1rem;
+  }
 }
 .section-hero__description-row1::before {
   content: "<p>";
@@ -366,14 +392,25 @@ header .nav__menu-item {
 .section-hero__description-row1, .section-hero__description-row2::after {
   padding-left: 1rem;
 }
-.section-hero__description-h2::before, .section-hero__description-h1::after, .section-hero__description-row1::before, .section-hero__description-row2::after {
+.section-hero__description-h1::before, .section-hero__description-h1::after, .section-hero__description-row1::before, .section-hero__description-row2::after {
   font-size: 1.3rem;
   font-family: "Source Code Pro", monospace;
   font-weight: 200;
+  color: #0000007a;
   vertical-align: middle;
 }
-.section-hero__description-h1, .section-hero__description-row2, .section-hero__description-btns {
+.section-hero__description-row2, .section-hero__description-btns {
   padding-left: 4.2rem;
+}
+.section-hero__description-row1, .section-hero__description-row2 {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .section-hero__description-row1, .section-hero__description-row2 {
+    font-size: 1.8rem;
+    line-height: 2.9rem;
+  }
 }
 
 .grid {
@@ -396,7 +433,7 @@ header .nav__menu-item {
   background: url(../assets/images/icons/polygon-3-left.svg) no-repeat;
   transform: translate(-45%, 0);
 }
-@media (min-width: 640px) {
+@media (min-width: 590px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -418,7 +455,7 @@ header .nav__menu-item {
   background-size: 100%;
   background-position: center 94%;
 }
-@media (min-width: 560px) {
+@media (min-width: 460px) {
   .section-contact {
     padding-bottom: 0;
     background-size: 65%;
@@ -436,7 +473,7 @@ header .nav__menu-item {
   row-gap: 2rem;
   justify-content: center;
 }
-@media (min-width: 560px) {
+@media (min-width: 460px) {
   .section-contact__content {
     justify-content: start;
   }
@@ -448,7 +485,7 @@ header .nav__menu-item {
   max-width: 15rem;
   margin: auto;
 }
-@media (min-width: 560px) {
+@media (min-width: 460px) {
   .section-contact__icons {
     margin: 0;
   }
@@ -538,15 +575,15 @@ header .nav__menu-item {
 
 .section-hero__image {
   position: relative;
-  min-height: 47rem;
+  min-height: 35rem;
   background: no-repeat center/cover url(../assets/images/icons/hero-img-tablet.svg);
 }
-@media (min-width: 560px) {
+@media (min-width: 460px) {
   .section-hero__image {
     min-height: 50rem;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 590px) {
   .section-hero__image {
     min-height: 53rem;
   }
@@ -579,7 +616,7 @@ header .nav__menu-item {
 }
 @media (min-width: 942px) {
   .section-hero__image {
-    min-height: 70rem;
+    min-height: 66rem;
   }
 }
 @media (min-width: 1200px) {
@@ -613,7 +650,8 @@ header .nav__menu-item {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .grid__card-text {
-  padding: 2rem;
+  padding: 2.5rem 2rem 2rem 2rem;
+  font-size: 1.5rem;
   flex: auto;
 }
 .grid__card-text--links {
@@ -675,7 +713,7 @@ header .nav__menu-item {
   border-radius: 50%;
 }
 .nav__items-toggler {
-  background-color: #262626;
+  background-color: #292929;
   cursor: pointer;
   z-index: 2;
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);

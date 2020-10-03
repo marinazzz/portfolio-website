@@ -33,7 +33,18 @@ body.dark-mode {
 	}
 
 	& .section-heading--neutral {
-		color: $primary-heading-color-contrast;
+		color: $color-links;
+	}
+
+	& .section-hero__description-h1::before,
+	& .section-hero__description-h1::after,
+	& .section-hero__description-row1::before,
+	& .section-hero__description-row2::after {
+		color: $color-pseudo;
+	}
+
+	& .section-heading--accent {
+		color: $color-links;
 	}
 
 	//links
@@ -51,11 +62,17 @@ body.dark-mode {
 
 	& .primary-button {
 		color: $text-on-buttons;
+		background-color: $btn-bcd;
 	}
 
 	& .primary-button--ghost {
 		color: $text-on-buttons-light;
+		background-color: inherit;
 		border: 0.1rem $text-on-buttons-light solid;
+
+		&:hover {
+			background-color: $btn-bcd;
+		}
 	}
 
 	//cards

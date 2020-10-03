@@ -13,7 +13,6 @@
 
 	&__description {
 		@include padding-wrapper;
-		padding-right: 0;
 		@include row-grid('one');
 		row-gap: 2rem;
 		align-items: center;
@@ -23,13 +22,10 @@
 			flex: 3;
 		}
 
-		&-heading,
 		&-info {
 			@include row-grid('two');
 			row-gap: 0.6rem;
-		}
 
-		&-info {
 			@include breakpoint-down("md") {
 				padding-bottom: 2rem;
 			}
@@ -48,21 +44,29 @@
 			width: 2.6rem;
 			height: 2.8rem;
 			transition: all 0.2s ease-in-out;
-			background: no-repeat center/95% url(../../assets/images/icons/arrpw-down.svg);
+			background: no-repeat center/95% url(../assets/images/icons/arrpw-down.svg);
 		}
 
-		&-h2,
 		&-h1 {
-			font-weight: 800;
+			display: inline-flex;
 		}
 
-		&-h2::before {
+		&-h1::before {
 			content: '<h1>';
-			padding-right: 1rem;
+			align-self: baseline;
+			padding: 1.2rem 1rem 0 0;
+			@include breakpoint-up("lg") {
+				padding: 2.1rem 1rem 0 0;
+			}
 		}
 
 		&-h1::after {
 			content: '</h1>';
+			align-self: flex-end;
+			padding: 0 0 1rem 1rem;
+			@include breakpoint-up("lg") {
+				padding: 0 0 1.8rem 1rem;
+			}
 		}
 
 		&-row1::before {
@@ -79,20 +83,31 @@
 			padding-left: 1rem;
 		}
 
-		&-h2::before,
+		&-h1::before,
 		&-h1::after,
 		&-row1::before,
 		&-row2::after {
 			font-size: 1.3rem;
 			font-family: 'Source Code Pro', monospace;
 			font-weight: 200;
+			color: $secondary-darker-color;
 			vertical-align: middle;
 		}
 
-		&-h1,
 		&-row2,
 		&-btns {
 			padding-left: 4.2rem;
+		}
+
+		&-row1,
+		&-row2 {
+			font-size: 1.6rem;
+			line-height: 2.5rem;
+
+			@include breakpoint-up("md") {
+				font-size: 1.8rem;
+				line-height: 2.9rem;
+			}
 		}
 	}
 }
