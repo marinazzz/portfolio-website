@@ -1,6 +1,6 @@
 html {
 	font-size: 62.5%;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Karla', sans-serif;
 }
 
 body {
@@ -18,8 +18,10 @@ h4 {
 }
 
 h1 {
-	font-size: 3.2rem;
+	font-family: 'Nunito', sans-serif;
+	font-size: 3.4rem;
 	line-height: 5rem;
+	letter-spacing: 0.1rem;
 
 	@include breakpoint-up("lg") {
 		font-size: 5rem;
