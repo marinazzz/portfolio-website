@@ -316,6 +316,10 @@ p {
   color: #0c00fa;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 body.dark-mode {
   background-color: #212121;
   color: whitesmoke;
@@ -924,6 +928,29 @@ header .nav__menu-item {
 }
 .nav__button--open > div:nth-child(3) {
   transform: translateY(-0.555rem) rotate(-45deg);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+}
+.modal-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px rgba(0, 0, 0, 0.12) solid;
+  background-color: #ededed;
+  z-index: 110;
+}
+.modal-window.visible {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
