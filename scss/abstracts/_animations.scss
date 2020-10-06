@@ -82,26 +82,40 @@
 	animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-@-webkit-keyframes color-change-contrast {
-	0% {
-		color: $primary-heading-color-contrast;
-	}
+@-webkit-keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
 	100% {
-		color: $primary-heading-color;
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-2.5rem);
+	}
+	60% {
+		transform: translateY(-1.5rem);
 	}
 }
-@keyframes color-change-contrast {
-	0% {
-		color: $primary-heading-color-contrast;
-	}
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
 	100% {
-		color: $primary-heading-color;
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-2.5rem);
+	}
+	60% {
+		transform: translateY(-1.5rem);
 	}
 }
 
-.color-change-contrast {
-	-webkit-animation: color-change-contrast 1.2s linear infinite alternate both;
-	animation: color-change-contrast 1.2s linear infinite alternate both;
+.bounce {
+	-webkit-animation: bounce 1.5s infinite;
+	animation: bounce 1.5s infinite;
 }
 
 /* ----------------------------------------------

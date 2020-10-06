@@ -78,25 +78,31 @@
   animation: fade-in-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-@-webkit-keyframes color-change-contrast {
-  0% {
-    color: #6961ff;
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  100% {
-    color: #3f3d57;
+  40% {
+    transform: translateY(-2.5rem);
   }
-}
-@keyframes color-change-contrast {
-  0% {
-    color: #6961ff;
-  }
-  100% {
-    color: #3f3d57;
+  60% {
+    transform: translateY(-1.5rem);
   }
 }
-.color-change-contrast {
-  -webkit-animation: color-change-contrast 1.2s linear infinite alternate both;
-  animation: color-change-contrast 1.2s linear infinite alternate both;
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-2.5rem);
+  }
+  60% {
+    transform: translateY(-1.5rem);
+  }
+}
+.bounce {
+  -webkit-animation: bounce 1.5s infinite;
+  animation: bounce 1.5s infinite;
 }
 
 /* ----------------------------------------------
