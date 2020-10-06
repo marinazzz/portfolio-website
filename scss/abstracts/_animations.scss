@@ -36,8 +36,8 @@
 }
 
 .fade-in-top {
-	-webkit-animation: fade-in-top 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: fade-in-top 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 /* ----------------------------------------------
@@ -78,8 +78,8 @@
 }
 
 .fade-in-right {
-	-webkit-animation: fade-in-right 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: fade-in-right 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @-webkit-keyframes color-change-contrast {
@@ -100,8 +100,8 @@
 }
 
 .color-change-contrast {
-	-webkit-animation: color-change-contrast 1.5s linear infinite alternate both;
-	animation: color-change-contrast 1.5s linear infinite alternate both;
+	-webkit-animation: color-change-contrast 1.2s linear infinite alternate both;
+	animation: color-change-contrast 1.2s linear infinite alternate both;
 }
 
 /* ----------------------------------------------
