@@ -4,12 +4,13 @@
 	color: $secondary-text-color;
 	position: relative;
 
-	// to do: fix position of polygon
 	&::before {
-		// content: '';
+		content: '';
 		position: absolute;
-		width: 10.5rem;
+		width: 4.5rem;
 		height: 12rem;
+		top: 0;
+		right: 0;
 		background: url(../assets/images/icons/polygon-3-right.svg) no-repeat;
 	}
 
@@ -21,29 +22,32 @@
 
 		@include breakpoint-up("sm") {
 			@include col-grid('two');
-			column-gap: 2rem;
+			column-gap: 5rem;
 		}
 
 		@include breakpoint-up("lg") {
-			column-gap: 6rem;
+			column-gap: 8rem;
 		}
 	}
 
 	&__text {
 		padding-bottom: 5rem;
+
+		&--first-row {
+			padding-bottom: 2rem;
+		}
 	}
 
 	&__icons {
 		@include display-flex;
 		justify-content: end;
-		align-items: baseline;
 
-		> div:nth-child(1) {
-			align-self: flex-end;
+		@include breakpoint-up("sm") {
+			padding-top: 5rem;
 		}
 
-		> div:nth-child(2) {
-			align-self: center;
+		> li:nth-child(2) {
+			align-self: flex-start;
 		}
 
 		&-wrapp {

@@ -29,13 +29,13 @@ $secondary-heading-color: hsl(220, 16%, 96%);
 
 //Dark Mode
 $body-bcd: lighten(#121212, 6%);
-$text-on-body-bcd: darken(#ffffff, 4%);
+$text-on-body-bcd: darken(#ffffff, 10%);
 
 $components-bcd: lighten(#121212, 9%);
 $components-bcd-light: lighten(#121212, 10%);
 
 $text-on-components: darken(#ffffff, 15%);
-$heading-on-components: darken(#ffffff, 8%);
+$heading-on-components: darken(#ffffff, 10%);
 
 $text-on-buttons: #060606;
 $text-on-buttons-light: #9994ff;

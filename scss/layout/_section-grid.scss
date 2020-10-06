@@ -7,14 +7,16 @@
 	&--bcd {
 		background: $secondary-bcd-color;
 		position: relative;
-		padding: 2rem 0;
+		padding-bottom: 2rem;
 		&::before {
 			content: '';
 			position: absolute;
-			width: 10.5rem;
-			height: 10rem;
-			background: url(../assets/images/icons/polygon-3-left.svg) no-repeat;
-			transform: translate(-45%, 0);
+			width: 4.5rem;
+			height: 12rem;
+			top: 0;
+			left: 0;
+			background: url(../assets/images/icons/polygon-3-purple.svg) no-repeat;
+			transform: rotate(180deg);
 		}
 	}
 
