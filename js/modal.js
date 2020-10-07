@@ -8,33 +8,32 @@ let modalModule = (function () {
   });
 
   function show() {
-    const documentBody = document.getElementsByTagName('body')[0];
-    if (!documentBody.classList.contains('no-scroll')) {
-      documentBody.classList.add('no-scroll');
-      documentBody.appendChild(overlay);
-    }
+    const documentBody = document.querySelector('body');
+    checkClassList(documentBody, 'no-scroll');
+    documentBody.appendChild(overlay);
 
-    const modal = document.getElementsByClassName('modal-window')[0];
-    if (!modal.classList.contains('visible')) {
-      modal.classList.add('visible');
-    }
+    const modal = document.querySelector('.modal-window');
+    checkClassList(modal, 'visible');
   }
 
   function hide() {
-    const documentBody = document.getElementsByTagName('body')[0];
-    if (documentBody.classList.contains('no-scroll')) {
-      documentBody.classList.remove('no-scroll');
-      document.getElementsByClassName('modal-overlay')[0].remove();
-    }
+    const documentBody = document.querySelector('body');
+    checkClassList(documentBody, 'no-scroll');
+    overlay.remove();
 
-    const modal = document.getElementsByClassName('modal-window')[0];
-    if (modal.classList.contains('visible')) {
-      modal.classList.remove('visible');
-    }
+    const modal = document.querySelector('.modal-window');
+    checkClassList(modal, 'visible');
+  }
+
+  function checkClassList(element, className) {
+    (!element.classList.contains(className)) ?
+      element.classList.add(className) :
+      element.classList.remove(className);
   }
 
   return {
     show,
+    checkClassList,
     hide
   }
 })();
