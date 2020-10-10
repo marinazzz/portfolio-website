@@ -31,9 +31,30 @@ let modalModule = (function () {
       element.classList.remove(className);
   }
 
+  let projectData = [];
+
+  async function getProjects() {
+    const response = await fetch(
+      '/js/project-data.json'
+    );
+    return response.json();
+  }
+
+  getProjects()
+    .then((data) => {
+      projectData = data;
+      console.log(data);
+      // displayProject();
+    })
+
+  // function displayProject() {
+
+  // }
+
   return {
     show,
     checkClassList,
-    hide
+    hide,
+    getProjects
   }
 })();

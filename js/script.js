@@ -57,9 +57,10 @@ darkModeToggler.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
 })
 
-const cards = [...document.querySelectorAll('.grid__card')];
-cards.forEach(element => {
-  element.addEventListener('click', function () {
+const infoBtns = [...document.querySelectorAll('.info-btn')];
+infoBtns.forEach(element => {
+  element.addEventListener('click', function (e) {
+    e.preventDefault();
     modalModule.show();
   });
 });

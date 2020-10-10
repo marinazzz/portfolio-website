@@ -1,25 +1,84 @@
 .modal {
-  &-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.25);
-    z-index: 100;
-  }
+	&-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.25);
+		z-index: 100;
+	}
 
-  &-window {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px $secondary-border-card-color solid;
-    background-color: $primary-card-color;
-    z-index: 110;
-    &.visible {
-      display: block;
-    }
-  }
+	&-window {
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 30rem;
+		padding: 1.5rem;
+		border: 0.1rem $secondary-border-card-color solid;
+		border-radius: 0.5rem;
+		background-color: $primary-card-color;
+		z-index: 110;
+		&.visible {
+			display: block;
+		}
+
+		@include breakpoint-up("md") {
+			padding: 2rem;
+		}
+	}
+
+	&-header {
+		hr {
+			border-color: $primary-heading-color-contrast;
+			margin-block-start: 1.5rem;
+			margin-block-end: 1.5rem;
+		}
+	}
+
+	&-content {
+		padding-top: 1rem;
+		&__row {
+			@include breakpoint-up("lg") {
+				@include display-flex;
+				align-items: baseline;
+			}
+
+			> div:nth-child(1) {
+				@include breakpoint-up("lg") {
+					padding-right: 4rem;
+				}
+			}
+
+			&-item {
+				padding-bottom: 2rem;
+			}
+		}
+
+		&__title {
+			padding-bottom: 1rem;
+		}
+
+		&__list {
+			padding: 0 2rem 2rem 2rem;
+			list-style-type: disc;
+
+			&-item {
+				display: list-item;
+				padding-bottom: 0.8rem;
+			}
+		}
+	}
+
+	&-footer {
+		padding-top: 1.5rem;
+		display: flex;
+
+		a {
+			display: inline-block;
+			margin-right: 1.5rem;
+		}
+	}
 }
