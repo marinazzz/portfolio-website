@@ -31,12 +31,13 @@
 	}
 
 	&-header {
-		hr {
-			border-color: $primary-heading-color-contrast;
-			margin-block-start: 1.5rem;
-			margin-block-end: 1.5rem;
-		}
-	}
+		padding-bottom: 1.5rem;
+  }
+  
+  &-title {
+    border-bottom: 3px solid $primary-heading-color-contrast;
+    padding-bottom: 1.5rem;
+  }
 
 	&-content {
 		padding-top: 1rem;
@@ -75,7 +76,7 @@
 	&-footer {
 		padding-top: 1.5rem;
 		display: flex;
-
+    border-top: 1px solid lighten($primary-txt-color, 75%);
 		a {
 			display: inline-block;
 			margin-right: 1.5rem;

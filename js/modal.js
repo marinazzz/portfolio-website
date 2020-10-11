@@ -7,19 +7,77 @@ let modalModule = (function () {
     }
   });
 
-  function show() {
+  function show(projectData) {
     const documentBody = document.querySelector('body');
     checkClassList(documentBody, 'no-scroll');
-    documentBody.appendChild(overlay);
 
-    const modal = document.querySelector('.modal-window');
+    let modal = document.createElement('div');
+    modal.classList.add('modal-window');
+
+    let modalHeader = document.createElement('div');
+    modalHeader.classList.add('modal-header')
+
+    let modalTitle = document.createElement('h2');
+    modalTitle.classList.add('modal-title');
+    modalTitle.innerText = projectData.name;
+
+    modalHeader.appendChild(modalTitle);
+
+    let modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+
+    let modalContentRow = document.createElement('div');
+    modalContentRow.classList.add('modal-content__row');
+    modalContent.appendChild(modalContentRow);
+
+    let modalRowItemChallengesContainer = document.createElement('div');
+    modalRowItemChallengesContainer.classList.add('modal-content__row-item');
+
+    // creating "Technologies" section title
+    let modalRowItemTitle = document.createElement('h3');
+    modalRowItemTitle.classList.add('modal-content__title');
+
+    modalRowItemTitle.innerText = 'Technologies:';
+
+    modalRowItemChallengesContainer.appendChild(
+      modalRowItemTitle
+    );
+    // creating "Technologies" section data
+    let technologiesContent = '';
+    projectData.technology.forEach((el, index) => {
+      technologiesContent += el;
+      if (index !== projectData.technology.length - 1) {
+        technologiesContent += ', ';
+      }
+    });
+    let technologiesContentNode = document.createElement('p');
+    technologiesContentNode.classList.add('modal-content__technology');
+    technologiesContentNode.innerText = technologiesContent
+    modalRowItemChallengesContainer.appendChild(
+      technologiesContentNode
+    )
+    modalContent.appendChild(modalRowItemChallengesContainer);
+
+    modal.appendChild(modalHeader);
+    modal.appendChild(modalContent);
+
+    documentBody.appendChild(overlay);
+    documentBody.appendChild(modal);
+
+    // const modal = document.querySelector('.modal-window');
     checkClassList(modal, 'visible');
   }
 
   function hide() {
     const documentBody = document.querySelector('body');
     checkClassList(documentBody, 'no-scroll');
+
+
+    const modals = document.getElementsByClassName('modal-window');
+    Array.from(modals).forEach(modal => modal.remove());
     overlay.remove();
+
+
 
     const modal = document.querySelector('.modal-window');
     checkClassList(modal, 'visible');
@@ -31,30 +89,9 @@ let modalModule = (function () {
       element.classList.remove(className);
   }
 
-  let projectData = [];
-
-  async function getProjects() {
-    const response = await fetch(
-      '/js/project-data.json'
-    );
-    return response.json();
-  }
-
-  getProjects()
-    .then((data) => {
-      projectData = data;
-      console.log(data);
-      // displayProject();
-    })
-
-  // function displayProject() {
-
-  // }
-
   return {
     show,
     checkClassList,
     hide,
-    getProjects
   }
 })();

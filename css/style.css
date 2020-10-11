@@ -838,7 +838,7 @@ header .nav__menu-item {
 }
 .primary-button:hover {
   background: #9994ff;
-  border: 0.1rem solid #6961ff;
+  border-color: #9994ff;
   transition: all 0.25s ease;
 }
 .primary-button--ghost {
@@ -848,6 +848,7 @@ header .nav__menu-item {
 }
 .primary-button--ghost:hover {
   background: #9994ff;
+  border-color: #9994ff;
   color: white;
 }
 
@@ -960,10 +961,12 @@ header .nav__menu-item {
     padding: 2rem;
   }
 }
-.modal-header hr {
-  border-color: #6961ff;
-  margin-block-start: 1.5rem;
-  margin-block-end: 1.5rem;
+.modal-header {
+  padding-bottom: 1.5rem;
+}
+.modal-title {
+  border-bottom: 3px solid #6961ff;
+  padding-bottom: 1.5rem;
 }
 .modal-content {
   padding-top: 1rem;
@@ -998,6 +1001,7 @@ header .nav__menu-item {
 .modal-footer {
   padding-top: 1.5rem;
   display: flex;
+  border-top: 1px solid #cdd6da;
 }
 .modal-footer a {
   display: inline-block;
