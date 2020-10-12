@@ -78,6 +78,41 @@
   animation: fade-in-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 400ms ease-in-out forwards;
+}
+
 @-webkit-keyframes color-change-contrast {
   0% {
     color: #6961ff;
@@ -806,6 +841,9 @@ header .nav__menu-item {
   font-size: 1.5rem;
   flex: auto;
 }
+.grid__card-text-link:hover {
+  color: #0c00fa;
+}
 .grid__card-text--links {
   display: flex;
   justify-content: space-between;
@@ -816,10 +854,15 @@ header .nav__menu-item {
   letter-spacing: 0.2rem;
   background: #ededed;
 }
-.grid__card-text--links a {
+.grid__card-text--links .info-btn {
   color: #6961ff;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
 }
-.grid__card-text--links a:hover {
+.grid__card-text--links .info-btn:hover {
   color: #0c00fa;
 }
 .grid__card-text h3 {
@@ -941,7 +984,7 @@ header .nav__menu-item {
   z-index: 100;
 }
 .modal-window {
-  display: none;
+  visibility: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -954,7 +997,7 @@ header .nav__menu-item {
   z-index: 110;
 }
 .modal-window.visible {
-  display: block;
+  visibility: visible;
 }
 @media (min-width: 768px) {
   .modal-window {

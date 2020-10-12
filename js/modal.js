@@ -12,17 +12,12 @@ let modalModule = (function () {
     checkClassList(documentBody, 'no-scroll');
 
     let modal = document.createElement('div');
-    modal.classList.add('modal-window');
+    modal.classList.add('modal-window', 'fade-in');
 
     // Create Modal Header
     let modalHeader = document.createElement('div');
     modalHeader.classList.add('modal-header')
-
-    let modalTitle = document.createElement('h2');
-    modalTitle.classList.add('modal-title');
-    modalTitle.innerText = projectData.name;
-
-    modalHeader.appendChild(modalTitle);
+    modalHeader.appendChild(createModalTitle(projectData));
 
     // Create Modal content
     let modalContent = document.createElement('div');
@@ -32,35 +27,67 @@ let modalModule = (function () {
     modalContentRow.classList.add('modal-content__row');
     modalContent.appendChild(modalContentRow);
 
+    // Create Challenge section content
     let modalContentRowChallenge = document.createElement('div');
     modalContentRowChallenge.classList.add('modal-content__row-item');
 
-    // Create Challenge section content
-
-    // creating "Challenge" section title
-    let challengeItemTitle = document.createElement('h3');
-    challengeItemTitle.classList.add('modal-content__title');
-    challengeItemTitle.innerText = 'Challenge:';
-
-    // creating "Challenge" section data
-    let challengeContentNode = document.createElement('p');
-    challengeContentNode.classList.add('modal-content__challenge');
-    challengeContentNode.innerText = projectData.challenge;
-
     modalContentRowChallenge.append(
-      challengeItemTitle, challengeContentNode
+      createContentTitle('Challenge:'), createChallengeContentNode(projectData)
     );
 
     // Create Technologies section content
     let modalContentRowTechnologies = document.createElement('div');
     modalContentRowTechnologies.classList.add('modal-content__row-item');
 
-    // creating "Technologies" section title
-    let technologiesItemTitle = document.createElement('h3');
-    technologiesItemTitle.classList.add('modal-content__title');
-    technologiesItemTitle.innerText = 'Technologies:';
+    modalContentRowTechnologies.append(
+      createContentTitle('Technologies:'), createTechnologiesContentNode(projectData)
+    );
 
-    // creating "Technologies" section data
+    // Create Usability section content
+    let modalContentRowUsability = document.createElement('div');
+    modalContentRowUsability.append(createContentTitle('Users are able to:'), createItemList(projectData));
+
+    // Create Footer section content
+    let modalFooter = document.createElement('div');
+    modalFooter.classList.add('modal-footer');
+    modalFooter.append(createFooterLink(projectData), createFooterGhostButton());
+
+    //Append content to modal
+    modalContentRow.append(modalContentRowChallenge, modalContentRowTechnologies);
+    modalContent.append(modalContentRow, modalContentRowUsability);
+    modal.append(modalHeader, modalContent, modalFooter);
+
+    documentBody.append(overlay, modal);
+
+    checkClassList(modal, 'visible');
+    hideModalOnButtonClick();
+  }
+
+  function createModalTitle(projectData) {
+    let modalTitle = document.createElement('h2');
+    modalTitle.classList.add('modal-title');
+    modalTitle.innerText = projectData.name;
+
+    return modalTitle;
+  }
+
+  function createContentTitle(text) {
+    let contentItemTitle = document.createElement('h3');
+    contentItemTitle.classList.add('modal-content__title');
+    contentItemTitle.innerText = text;
+
+    return contentItemTitle;
+  }
+
+  function createChallengeContentNode(projectData) {
+    let challengeContentNode = document.createElement('p');
+    challengeContentNode.classList.add('modal-content__challenge');
+    challengeContentNode.innerText = projectData.challenge;
+
+    return challengeContentNode;
+  }
+
+  function createTechnologiesContentNode(projectData) {
     let technologiesContent = '';
     projectData.technology.forEach((el, index) => {
       technologiesContent += el;
@@ -72,19 +99,10 @@ let modalModule = (function () {
     technologiesContentNode.classList.add('modal-content__technology');
     technologiesContentNode.innerText = technologiesContent;
 
-    modalContentRowTechnologies.append(
-      technologiesItemTitle, technologiesContentNode
-    );
+    return technologiesContentNode;
+  }
 
-    // Create Usability section content
-    let modalContentRowUsability = document.createElement('div');
-
-    // creating "usability" section title
-    let usabilityItemTitle = document.createElement('h3');
-    usabilityItemTitle.classList.add('modal-content__title');
-    usabilityItemTitle.innerText = 'Users are able to:';
-
-    // creating "usability" section list
+  function createItemList(projectData) {
     let usabilityItemList = document.createElement('ul');
     usabilityItemList.classList.add('modal-content__list');
 
@@ -96,43 +114,49 @@ let modalModule = (function () {
       usabilityItemList.append(usabilityItemListItem);
     })
 
-    modalContentRowUsability.append(usabilityItemTitle, usabilityItemList);
+    return usabilityItemList;
+  }
 
-    // Create Footer section content
-    let modalFooter = document.createElement('div');
-    modalFooter.classList.add('modal-footer');
-
-    // creating Footer primary button
+  function createFooterLink(projectData) {
     let modalFooterLink = document.createElement('a');
     modalFooterLink.classList.add('primary-button', 'modal-footer__link');
     modalFooterLink.innerText = 'Github';
     modalFooterLink.setAttribute('href', projectData.link);
     modalFooterLink.setAttribute('target', '_blank');
 
-    // creating Footer ghost button
-    let modalFooterGhostButton = document.createElement('button');
-    modalFooterGhostButton.classList.add('primary-button', 'primary-button--ghost');
-    modalFooterGhostButton.innerText = 'Close';
-    modalFooter.append(modalFooterLink, modalFooterGhostButton);
-
-    //Append content to modal
-    modalContentRow.append(modalContentRowChallenge, modalContentRowTechnologies);
-    modalContent.append(modalContentRow, modalContentRowUsability);
-    modal.append(modalHeader, modalContent, modalFooter);
-
-    documentBody.append(overlay, modal);
-
-    checkClassList(modal, 'visible');
+    return modalFooterLink;
   }
 
+  function createFooterGhostButton() {
+    let modalFooterGhostButton = document.createElement('button');
+    modalFooterGhostButton.classList.add('primary-button', 'primary-button--ghost', 'primary-modal-button--ghost');
+    modalFooterGhostButton.innerText = 'Close';
+
+    return modalFooterGhostButton;
+  }
 
   function hide() {
     const documentBody = document.querySelector('body');
     checkClassList(documentBody, 'no-scroll');
 
-    const modals = document.getElementsByClassName('modal-window');
-    Array.from(modals).forEach(modal => modal.remove());
-    overlay.remove();
+    const modals = [...document.querySelectorAll('.modal-window')];
+    modals.forEach(modal => {
+      modal.classList.add('fade-out');
+      setTimeout(() => {
+        modal.remove();
+        overlay.remove();
+      }, 300);
+
+    });
+
+  }
+
+  function hideModalOnButtonClick() {
+    const ghostFooterButton = document.querySelector('.primary-modal-button--ghost');
+    ghostFooterButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      hide();
+    })
   }
 
   function checkClassList(element, className) {
@@ -143,7 +167,6 @@ let modalModule = (function () {
 
   return {
     show,
-    checkClassList,
     hide
   }
 })();
