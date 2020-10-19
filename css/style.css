@@ -990,6 +990,8 @@ header .nav__menu-item {
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 30rem;
+  max-height: 90%;
+  overflow: scroll;
   padding: 1.5rem;
   border: 0.1rem rgba(0, 0, 0, 0.12) solid;
   border-radius: 0.5rem;
@@ -1002,6 +1004,7 @@ header .nav__menu-item {
 @media (min-width: 768px) {
   .modal-window {
     padding: 2rem;
+    overflow: hidden;
   }
 }
 .modal-header {

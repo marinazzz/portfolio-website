@@ -13,6 +13,7 @@ let modalModule = (function () {
 
     let modal = document.createElement('div');
     modal.classList.add('modal-window', 'fade-in');
+    modal.setAttribute('tabindex', '0');
 
     // Create Modal Header
     let modalHeader = document.createElement('div');
@@ -60,6 +61,7 @@ let modalModule = (function () {
     documentBody.append(overlay, modal);
 
     checkClassList(modal, 'visible');
+    trapFocus(modal);
     hideModalOnButtonClick();
   }
 
@@ -67,6 +69,7 @@ let modalModule = (function () {
     let modalTitle = document.createElement('h2');
     modalTitle.classList.add('modal-title');
     modalTitle.innerText = projectData.name;
+    modalTitle.setAttribute('tabindex', '-1');
 
     return modalTitle;
   }
@@ -139,16 +142,12 @@ let modalModule = (function () {
     const documentBody = document.querySelector('body');
     checkClassList(documentBody, 'no-scroll');
 
-    const modals = [...document.querySelectorAll('.modal-window')];
-    modals.forEach(modal => {
-      modal.classList.add('fade-out');
-      setTimeout(() => {
-        modal.remove();
-        overlay.remove();
-      }, 300);
-
-    });
-
+    const modal = document.querySelector('.modal-window');
+    modal.classList.add('fade-out');
+    setTimeout(() => {
+      modal.remove();
+      overlay.remove();
+    }, 300);
   }
 
   function hideModalOnButtonClick() {
@@ -163,6 +162,29 @@ let modalModule = (function () {
     (!element.classList.contains(className)) ?
       element.classList.add(className) :
       element.classList.remove(className);
+  }
+
+  function trapFocus(element) {
+    const focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+    const firstFocusableEl = focusableEls[0];
+    const lastFocusableEl = focusableEls[focusableEls.length - 1];
+    const KEYCODE_TAB = 9;
+
+    element.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab' || e.keyCode === KEYCODE_TAB) {
+        if (e.shiftKey) /* shift + tab */ {
+          if (document.activeElement === firstFocusableEl) {
+            e.preventDefault();
+            lastFocusableEl.focus();
+          }
+        } else /* tab */ {
+          if (document.activeElement === lastFocusableEl) {
+            e.preventDefault();
+            firstFocusableEl.focus();
+          }
+        }
+      }
+    });
   }
 
   return {

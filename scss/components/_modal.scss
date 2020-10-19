@@ -16,6 +16,8 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		min-width: 30rem;
+		max-height: 90%;
+		overflow: scroll;
 		padding: 1.5rem;
 		border: 0.1rem $secondary-border-card-color solid;
 		border-radius: 0.5rem;
@@ -27,6 +29,7 @@
 
 		@include breakpoint-up("md") {
 			padding: 2rem;
+			overflow: hidden;
 		}
 	}
 
