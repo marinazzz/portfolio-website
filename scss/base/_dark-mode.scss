@@ -28,7 +28,8 @@ body.dark-mode {
 	}
 
 	& p,
-	& h4 {
+	& h4,
+	& ul {
 		color: $text-on-components;
 	}
 
@@ -76,7 +77,8 @@ body.dark-mode {
 	}
 
 	//cards
-	& .grid__card {
+	& .grid__card,
+	& .modal-window {
 		background-color: $card-bcd;
 	}
 

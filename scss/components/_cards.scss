@@ -22,6 +22,9 @@
 		font-size: 1.5rem;
 		flex: auto;
 
+		&-link:hover {
+			color: darken(hsl(243, 100%, 69%), 20);
+		}
 		&--links {
 			@include display-flex;
 			padding: 1.5rem 3rem;
@@ -30,8 +33,13 @@
 			letter-spacing: 0.2rem;
 			background: $primary-card-color;
 
-			a {
-				color: $primary-link-color;
+			.info-btn {
+				color: #6961ff;
+				background: transparent;
+				font-family: inherit;
+				font-weight: 800;
+				font-size: 1.6rem;
+				letter-spacing: 0.1rem;
 				&:hover {
 					color: darken(hsl(243, 100%, 69%), 20);
 				}

@@ -82,11 +82,51 @@
 	animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-@-webkit-keyframes bounce {
-	0%,
-	20%,
-	50%,
-	80%,
+@keyframes fade-in {
+	from {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	1% {
+		visibility: visible;
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+	from {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	99% {
+		visibility: visible;
+		opacity: 0;
+	}
+
+	to {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.fade-out {
+	animation: fade-out 400ms ease-in-out forwards;
+}
+
+@keyframes color-change-contrast {
+	0% {
+		color: $primary-heading-color-contrast;
+	}
 	100% {
 		transform: translateY(0);
 	}

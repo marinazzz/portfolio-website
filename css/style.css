@@ -78,8 +78,46 @@
   animation: fade-in-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 400ms ease-in-out forwards;
+}
+
+@keyframes color-change-contrast {
+  0% {
+    color: #6961ff;
+  }
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -322,6 +360,10 @@ p {
   color: #0c00fa;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 body.dark-mode {
   background-color: #212121;
   color: #e6e6e6;
@@ -338,7 +380,7 @@ body.dark-mode h1, body.dark-mode h2 {
 body.dark-mode h3 {
   color: #e6e6e6;
 }
-body.dark-mode p, body.dark-mode h4 {
+body.dark-mode p, body.dark-mode h4, body.dark-mode ul {
   color: #d9d9d9;
 }
 body.dark-mode .section-heading--neutral {
@@ -368,7 +410,7 @@ body.dark-mode .primary-button--ghost {
 body.dark-mode .primary-button--ghost:hover {
   background-color: #9994ff;
 }
-body.dark-mode .grid__card {
+body.dark-mode .grid__card, body.dark-mode .modal-window {
   background-color: #383838;
 }
 body.dark-mode .grid__card-text--links {
@@ -843,6 +885,9 @@ header .nav__menu-item {
   font-size: 1.5rem;
   flex: auto;
 }
+.grid__card-text-link:hover {
+  color: #0c00fa;
+}
 .grid__card-text--links {
   display: flex;
   justify-content: space-between;
@@ -853,10 +898,15 @@ header .nav__menu-item {
   letter-spacing: 0.2rem;
   background: #ededed;
 }
-.grid__card-text--links a {
+.grid__card-text--links .info-btn {
   color: #6961ff;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
 }
-.grid__card-text--links a:hover {
+.grid__card-text--links .info-btn:hover {
   color: #0c00fa;
 }
 .grid__card-text h3 {
@@ -875,7 +925,7 @@ header .nav__menu-item {
 }
 .primary-button:hover {
   background: #9994ff;
-  border: 0.1rem solid #6961ff;
+  border-color: #9994ff;
   transition: all 0.25s ease;
 }
 .primary-button--ghost {
@@ -885,6 +935,7 @@ header .nav__menu-item {
 }
 .primary-button--ghost:hover {
   background: #9994ff;
+  border-color: #9994ff;
   color: white;
 }
 
@@ -965,6 +1016,86 @@ header .nav__menu-item {
 }
 .nav__button--open > div:nth-child(3) {
   transform: translateY(-0.555rem) rotate(-45deg);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+}
+.modal-window {
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 30rem;
+  max-height: 90%;
+  overflow: scroll;
+  padding: 1.5rem;
+  border: 0.1rem rgba(0, 0, 0, 0.12) solid;
+  border-radius: 0.5rem;
+  background-color: #ededed;
+  z-index: 110;
+}
+.modal-window.visible {
+  visibility: visible;
+}
+@media (min-width: 768px) {
+  .modal-window {
+    padding: 2rem;
+    overflow: hidden;
+  }
+}
+.modal-header {
+  padding-bottom: 1.5rem;
+}
+.modal-title {
+  border-bottom: 3px solid #6961ff;
+  padding-bottom: 1.5rem;
+}
+.modal-content {
+  padding-top: 1rem;
+}
+@media (min-width: 942px) {
+  .modal-content__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: baseline;
+  }
+}
+@media (min-width: 942px) {
+  .modal-content__row > div:nth-child(1) {
+    padding-right: 4rem;
+  }
+}
+.modal-content__row-item {
+  padding-bottom: 2rem;
+}
+.modal-content__title {
+  padding-bottom: 1rem;
+}
+.modal-content__list {
+  padding: 0 2rem 2rem 2rem;
+  list-style-type: disc;
+}
+.modal-content__list-item {
+  display: list-item;
+  padding-bottom: 0.8rem;
+}
+.modal-footer {
+  padding-top: 1.5rem;
+  display: flex;
+  border-top: 1px solid #cdd6da;
+}
+.modal-footer a {
+  display: inline-block;
+  margin-right: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
