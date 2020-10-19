@@ -10,8 +10,8 @@
 	background: $primary-btn-color;
 
 	&:hover {
-    background: lighten(hsl(243, 100%, 69%), 10);
-    border-color: lighten(hsl(243, 100%, 69%), 10);
+		background: lighten(hsl(243, 100%, 69%), 10);
+		border: 0.1rem solid $primary-btn-color;
 		transition: all 0.25s ease;
 	}
 
@@ -21,8 +21,7 @@
 		border: 0.1rem solid $primary-btn-color;
 
 		&:hover {
-      background: lighten(hsl(243, 100%, 69%), 10);
-      border-color: lighten(hsl(243, 100%, 69%), 10);
+			background: lighten(hsl(243, 100%, 69%), 10);
 			color: $secondary-btn-color;
 		}
 	}
