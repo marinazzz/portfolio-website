@@ -13,7 +13,6 @@ let modalModule = (function () {
 
     let modal = document.createElement('div');
     modal.classList.add('modal-window', 'fade-in');
-    modal.setAttribute('tabindex', '0');
 
     // Create Modal Header
     let modalHeader = document.createElement('div');
@@ -69,8 +68,6 @@ let modalModule = (function () {
     let modalTitle = document.createElement('h2');
     modalTitle.classList.add('modal-title');
     modalTitle.innerText = projectData.name;
-    modalTitle.setAttribute('tabindex', '-1');
-
     return modalTitle;
   }
 
@@ -126,7 +123,6 @@ let modalModule = (function () {
     modalFooterLink.innerText = 'Github';
     modalFooterLink.setAttribute('href', projectData.link);
     modalFooterLink.setAttribute('target', '_blank');
-
     return modalFooterLink;
   }
 
