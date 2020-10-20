@@ -84,5 +84,9 @@
 			display: inline-block;
 			margin-right: 1.5rem;
 		}
+
+		.primary-button--ghost:focus {
+			border: 0.2rem solid #6961ff;
+		}
 	}
 }
