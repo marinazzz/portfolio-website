@@ -30,7 +30,7 @@ const projects = [
   {
     id: "url-shortener",
     name: "Shortly URL Shortener",
-    challenge: "To integrate with the rel.ink API to create shortened URLs and display them like in the designs.",
+    challenge: "To integrate with the shrtcode API to create shortened URLs and display them like in the designs.",
     technology: ["Bootstrap", "SASS", "jQuery"],
     usability: [
       "View the optimal layout for the site depending on their device's screen size",
