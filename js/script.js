@@ -54,8 +54,8 @@ const projects = [
   },
   {
     id: "garden-site",
-    name: "Multipage Web Template",
-    challenge: "To build out landing page and get it looking as close to the design as possible",
+    name: "Multi-page Web Template",
+    challenge: "To build out multi-page website and get it looking as close to the design as possible",
     technology: ["HTML", "CSS", "plain JavaScript"],
     usability: [
       "View the optimal layout for the site depending on their device's screen size",

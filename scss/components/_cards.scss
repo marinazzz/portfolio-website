@@ -1,52 +1,57 @@
 .grid__card {
-	@include display-flex;
-	flex-direction: column;
-	align-items: stretch;
-	color: $primary-txt-color;
-	border-radius: 0.5rem;
-	box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.14), 0 0.2rem 0.1rem rgba(0, 0, 0, 0.12),
-		0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+  @include display-flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: $primary-txt-color;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.14),
+    0 0.2rem 0.1rem rgba(0, 0, 0, 0.12), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
 
-	&-graphic {
-		width: auto;
-		border-bottom: 0.2rem $secondary-border-card-color solid;
+  &-graphic {
+    width: auto;
+    border-bottom: 0.2rem $secondary-border-card-color solid;
 
-		&-item {
-			width: 100%;
-			border-radius: 0.5rem 0.5rem 0 0;
-		}
-	}
+    &-item {
+      width: 100%;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+  }
 
-	&-text {
-		padding: 2.5rem 2rem 2rem 2rem;
-		font-size: 1.5rem;
-		flex: auto;
+  &-text {
+    padding: 2.5rem 2rem 2rem 2rem;
+    font-size: 1.5rem;
+    flex: auto;
 
-		&-link:hover {
-			color: darken(hsl(243, 100%, 69%), 20);
-		}
-		&--links {
-			@include display-flex;
-			padding: 1.5rem 3rem;
-			border-radius: 0 0 0.5rem 0.5rem;
-			font-weight: 800;
-			letter-spacing: 0.2rem;
-			background: $primary-card-color;
+    &-link {
+      font-weight: 800;
+    }
 
-			.info-btn {
-				color: #6961ff;
-				background: transparent;
-				font-family: inherit;
-				font-size: 1.6rem;
-				letter-spacing: 0.1rem;
-				&:hover {
-					color: darken(hsl(243, 100%, 69%), 20);
-				}
-			}
-		}
+    &-link:hover {
+      color: darken(#6961ff, 20);
+    }
+    &--links {
+      @include display-flex;
+      padding: 1.5rem 3rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+      font-weight: 800;
+      letter-spacing: 0.2rem;
+      background: $primary-card-color;
 
-		h3 {
-			padding-bottom: 1.5rem;
-		}
-	}
+      .info-btn {
+        color: #2b24ff;
+        background: transparent;
+        font-family: inherit;
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+        &:hover {
+          color: darken(#2b24ff, 20);
+        }
+      }
+    }
+
+    h3 {
+      padding-bottom: 1.5rem;
+    }
+  }
 }

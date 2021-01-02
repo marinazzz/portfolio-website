@@ -3,7 +3,7 @@
 //Light Mode
 
 // buttons
-$primary-btn-color: hsl(243, 100%, 69%);
+$primary-btn-color: #2b24ff;
 $secondary-btn-color: hsl(0, 0%, 100%);
 
 //cards
@@ -12,19 +12,19 @@ $secondary-card-color: hsl(0, 0%, 4%);
 $secondary-border-card-color: hsla(0, 0%, 0%, 0.12);
 
 //links
-$primary-link-color: #6961ff;
+$primary-link-color: #2b24ff;
 
 // sections
 $primary-bcd-color: rgb(64 66 125 / 5%);
 $secondary-bcd-color: rgb(250, 250, 250);
-$primary-bcd-color-contrast: hsl(242, 19%, 65%);
+$primary-bcd-color-contrast: #a0a0c0;
 
-$secondary-text-color: hsl(0, 0%, 100%);
+$secondary-text-color: #141414;
 $primary-txt-color: hsl(200, 15%, 8%);
 $secondary-darker-color: #0000007a;
 
-$primary-heading-color: hsl(245, 18%, 29%);
-$primary-heading-color-contrast: #6961ff;
+$primary-heading-color: #312f42;
+$primary-heading-color-contrast: #2b24ff;
 $secondary-heading-color: hsl(220, 16%, 96%);
 
 //Dark Mode
@@ -41,14 +41,31 @@ $text-on-buttons: #060606;
 $text-on-buttons-light: #9994ff;
 $btn-bcd: #9994ff;
 $color-links: #9994ff;
+$color-links-on-lighter: #b2aefb;
 $color-pseudo: darken(#ffffff, 50%);
 
 $card-bcd: lighten(#121212, 15%);
 $card-bcd-light-row: lighten(#121212, 18%);
 
 // BREAKPOINTS
-$breakpoints: ('xxs': '460px', 'xs': '590px', 'sm': '700px', 'md': '768px', 'lg': '942px', 'xl': '1200px');
+$breakpoints: (
+  'xxs': '460px',
+  'xs': '590px',
+  'sm': '700px',
+  'md': '768px',
+  'lg': '942px',
+  'xl': '1200px',
+);
 
 // grid number of columns/rows
-$column: ('one': 1, 'two': 2, 'three': 3);
-$row: ('one': 1, 'two': 2, 'three': 3, 'four': 4);
+$column: (
+  'one': 1,
+  'two': 2,
+  'three': 3,
+);
+$row: (
+  'one': 1,
+  'two': 2,
+  'three': 3,
+  'four': 4,
+);
