@@ -1,92 +1,92 @@
 .modal {
-	&-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba(0, 0, 0, 0.25);
-		z-index: 100;
-	}
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 100;
+  }
 
-	&-window {
-		visibility: hidden;
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		min-width: 30rem;
-		max-height: 90%;
-		overflow: scroll;
-		padding: 1.5rem;
-		border: 0.1rem $secondary-border-card-color solid;
-		border-radius: 0.5rem;
-		background-color: $primary-card-color;
-		z-index: 110;
-		&.visible {
-			visibility: visible;
-		}
+  &-window {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 30rem;
+    max-height: 90%;
+    overflow: scroll;
+    padding: 1.5rem;
+    border: 0.1rem $secondary-border-card-color solid;
+    border-radius: 0.5rem;
+    background-color: $primary-card-color;
+    z-index: 110;
+    &.visible {
+      visibility: visible;
+    }
 
-		@include breakpoint-up("md") {
-			padding: 2rem;
-			overflow: hidden;
-		}
-	}
+    @include breakpoint-up('md') {
+      padding: 2rem;
+      overflow: hidden;
+    }
+  }
 
-	&-header {
-		padding-bottom: 1.5rem;
-	}
+  &-header {
+    padding-bottom: 1.5rem;
+  }
 
-	&-title {
-		border-bottom: 3px solid $primary-heading-color-contrast;
-		padding-bottom: 1.5rem;
-	}
+  &-title {
+    border-bottom: 3px solid $primary-heading-color-contrast;
+    padding-bottom: 1.5rem;
+  }
 
-	&-content {
-		padding-top: 1rem;
-		&__row {
-			@include breakpoint-up("lg") {
-				@include display-flex;
-				align-items: baseline;
-			}
+  &-content {
+    padding-top: 1rem;
+    &__row {
+      @include breakpoint-up('lg') {
+        @include display-flex;
+        align-items: baseline;
+      }
 
-			> div:nth-child(1) {
-				@include breakpoint-up("lg") {
-					padding-right: 4rem;
-				}
-			}
+      > div:nth-child(1) {
+        @include breakpoint-up('lg') {
+          padding-right: 4rem;
+        }
+      }
 
-			&-item {
-				padding-bottom: 2rem;
-			}
-		}
+      &-item {
+        padding-bottom: 2rem;
+      }
+    }
 
-		&__title {
-			padding-bottom: 1rem;
-		}
+    &__title {
+      padding-bottom: 1rem;
+    }
 
-		&__list {
-			padding: 0 2rem 2rem 2rem;
-			list-style-type: disc;
+    &__list {
+      padding: 0 2rem 2rem 2rem;
+      list-style-type: disc;
 
-			&-item {
-				display: list-item;
-				padding-bottom: 0.8rem;
-			}
-		}
-	}
+      &-item {
+        display: list-item;
+        padding-bottom: 0.8rem;
+      }
+    }
+  }
 
-	&-footer {
-		padding-top: 1.5rem;
-		display: flex;
-		border-top: 1px solid lighten($primary-txt-color, 75%);
-		a {
-			display: inline-block;
-			margin-right: 1.5rem;
-		}
+  &-footer {
+    padding-top: 1.5rem;
+    display: flex;
+    border-top: 1px solid lighten($primary-txt-color, 75%);
+    a {
+      display: inline-block;
+      margin-right: 1.5rem;
+    }
 
-		.primary-button--ghost:focus {
-			border: 0.2rem solid #6961ff;
-		}
-	}
+    .primary-button--ghost:focus {
+      border: 0.2rem solid #6961ff;
+    }
+  }
 }

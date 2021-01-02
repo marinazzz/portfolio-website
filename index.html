@@ -1,15 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Personal portfolio website to showcase my work, designed and developed by Marina Zujic">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon_io/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Marina Zujic</title>
+    <title>Marina Zujic | Front-End Developer | Portfolio</title>
   </head>
 
   <body id="body">
@@ -19,11 +22,12 @@
         <div class="nav__items">
           <div>
             <div class="nav__items-toggler"></div>
-            <button class="nav__items-btn"></button>
+            <button class="nav__items-btn" aria-label="Switch theme button"></button>
           </div>
         </div>
         <div class="nav__list">
-          <button class="nav__button">
+          <button class="nav__button" id="menubutton" aria-label="Menu button" aria-haspopup="true"
+            aria-controls="menu2">
             <div class="nav__button-item">
             </div>
             <div class="nav__button-item">
@@ -32,18 +36,18 @@
             </div>
           </button>
           <div class="nav__list-wrapp">
-            <ul class="nav__menu">
-              <li class="nav__menu-item">
-                <a class="link-main-hover" href="#body">Home</a>
+            <ul class="nav__menu" id="menu2" role="menu">
+              <li class="nav__menu-item" role="none">
+                <a class="link-main-hover" href="#body" role="menuitem">Home</a>
               </li>
-              <li class="nav__menu-item">
-                <a class="link-main-hover" href="#portfolio">Portfolio</a>
+              <li class="nav__menu-item" role="none">
+                <a class="link-main-hover" href="#portfolio" role="menuitem">Portfolio</a>
               </li>
-              <li class="nav__menu-item">
-                <a class="link-main-hover" href="#about">About</a>
+              <li class="nav__menu-item" role="none">
+                <a class="link-main-hover" href="#about" role="menuitem">About</a>
               </li>
-              <li class="nav__menu-item">
-                <a class="link-main-hover" href="#contact">Contact</a>
+              <li class="nav__menu-item" role="none">
+                <a class="link-main-hover" href="#contact" role="menuitem">Contact</a>
               </li>
             </ul>
           </div>
@@ -79,7 +83,8 @@
                 <a href="#portfolio" class="primary-button primary-button--ghost">
                   PORTFOLIO</a>
               </div>
-              <a href="#portfolio" class="section-hero__description-icon bounce">
+              <a href="#portfolio" class="section-hero__description-icon bounce"
+                aria-label="Scroll down to read more about projects in portfolio section">
               </a>
             </div>
           </div>
@@ -94,7 +99,7 @@
             <article class="grid__card" data-project-id="search-for-countries">
               <div class="grid__card-graphic">
                 <img class="grid__card-graphic-item"
-                  src="assets/images/demo-images/search-for-countries-dark-mode-marinaz-demo.jpg"
+                  src="assets/images/demo-images/search-for-countries-dark-mode-marinaz-demo.webp"
                   alt="screenshot countries flags, search for countries" />
               </div>
               <div class="grid__card-text">
@@ -105,14 +110,15 @@
                 </p>
               </div>
               <div class="grid__card-text grid__card-text--links">
-                <a class="grid__card-text-link" href="https://marinazzz.github.io/search-for-countries/"
-                  target="_blank">DEMO</a>
+                <a class="grid__card-text-link" href="https://marinazzz.github.io/search-for-countries/" target="_blank"
+                  rel="noopener">LIVE</a>
                 <button class="info-btn">PROJECT INFO</button>
               </div>
             </article>
             <article class="grid__card" data-project-id="cooking-calculator">
               <div class="grid__card-graphic">
-                <img class="grid__card-graphic-item" src="assets/images/demo-images/cooking-calculator-marinaz-demo.jpg"
+                <img class="grid__card-graphic-item"
+                  src="assets/images/demo-images/cooking-calculator-marinaz-demo.webp"
                   alt="screenshot ilustrations cheef holding recipe book" />
               </div>
               <div class="grid__card-text">
@@ -122,33 +128,33 @@
                 </p>
               </div>
               <div class="grid__card-text grid__card-text--links">
-                <a class="grid__card-text-link" href="https://marinazzz.github.io/cooking-calculator/"
-                  target="_blank">DEMO</a>
+                <a class="grid__card-text-link" href="https://marinazzz.github.io/cooking-calculator/" target="_blank"
+                  rel="noopener">LIVE</a>
                 <button class="info-btn">PROJECT INFO</button>
               </div>
             </article>
             <article class="grid__card" data-project-id="garden-site">
               <div class="grid__card-graphic">
                 <img class="grid__card-graphic-item"
-                  src="assets/images/demo-images/multipage-webtemplate-marinaz-demo.jpg"
+                  src="assets/images/demo-images/multipage-webtemplate-marinaz-demo_1.webp"
                   alt="screenshot garden with stones" />
               </div>
               <div class="grid__card-text">
-                <h3 class="grid__card-heading">Multipage Web Template</h3>
+                <h3 class="grid__card-heading">Multi-page Web Template</h3>
                 <p>Responsive modern Garden Design template for landscape entrepreneurs with pleasant
                   and easy navigation.
                 </p>
               </div>
               <div class="grid__card-text grid__card-text--links">
                 <a class="grid__card-text-link" href="https://marinazzz.github.io/garden-design-website/"
-                  target="_blank">DEMO</a>
+                  target="_blank" rel="noopener">LIVE</a>
                 <button class="info-btn">PROJECT INFO</button>
               </div>
             </article>
             <article class="grid__card" data-project-id="url-shortener">
               <div class="grid__card-graphic">
                 <img class="grid__card-graphic-item"
-                  src="assets/images/demo-images/shortly-url-shortener-marinaz-demo.jpg"
+                  src="assets/images/demo-images/shortly-url-shortener-marinaz-demo.webp"
                   alt="ilustration person sitting on front of computer" />
               </div>
               <div class="grid__card-text">
@@ -159,14 +165,14 @@
                 </p>
               </div>
               <div class="grid__card-text grid__card-text--links">
-                <a class="grid__card-text-link" href="https://marinazzz.github.io/url-shortening-app/"
-                  target="_blank">DEMO</a>
+                <a class="grid__card-text-link" href="https://marinazzz.github.io/url-shortening-app/" target="_blank"
+                  rel="noopener">LIVE</a>
                 <button class="info-btn">PROJECT INFO</button>
               </div>
             </article>
             <article class="grid__card" data-project-id="restaurant">
               <div class="grid__card-graphic">
-                <img class="grid__card-graphic-item" src="assets/images/demo-images/restaurant-marinaz-demo.jpg"
+                <img class="grid__card-graphic-item" src="assets/images/demo-images/restaurant-marinaz-demo.webp"
                   alt="clear drinking glass on restaurant table" />
               </div>
               <div class="grid__card-text">
@@ -176,41 +182,41 @@
                 </p>
               </div>
               <div class="grid__card-text grid__card-text--links">
-                <a class="grid__card-text-link" href="https://marinazzz.github.io/restaurant-website/"
-                  target="_blank">DEMO</a>
+                <a class="grid__card-text-link" href="https://marinazzz.github.io/restaurant-website/" target="_blank"
+                  rel="noopener">LIVE</a>
                 <button class="info-btn">PROJECT INFO</button>
               </div>
             </article>
             <article class="grid__card" data-project-id="easybank">
               <div class="grid__card-graphic">
                 <img class="grid__card-graphic-item"
-                  src="assets/images/demo-images/easybank-landing-oage-marinaz-demo.jpg"
+                  src="assets/images/demo-images/easybank-landing-oage-marinaz-demo.webp"
                   alt="mobile phones, electronic ilustrations" />
               </div>
               <div class="grid__card-text">
                 <h3 class="grid__card-heading">Easybank Landing Page</h3>
-                <p>Landing Page template for banking or any other financial business, it is
+                <p>Landing page template for banking or any other financial business, it is
                   informational
                   and user friendly.
                 </p>
               </div>
               <div class="grid__card-text grid__card-text--links">
-                <a class="grid__card-text-link" href="https://marinazzz.github.io/bank-landing-page/"
-                  target="_blank">DEMO</a>
+                <a class="grid__card-text-link" href="https://marinazzz.github.io/bank-landing-page/" target="_blank"
+                  rel="noopener">LIVE</a>
                 <button class="info-btn">PROJECT INFO</button>
               </div>
             </article>
           </div>
-          <a class="primary-button primary-button--center" target="_blank"
+          <a class="primary-button primary-button--center" target="_blank" rel="noopener"
             href="https://github.com/marinazzz?tab=repositories">
-            SEE MORE</a>
+            ALL GITHUB REPOS</a>
         </div>
         </div>
       </section>
       <section class="section-about" id="about">
         <div class="container container--display-block">
           <h2 class="section-heading">About
-            <span class="section-heading--neutral">Me</span>
+            <span class="">me</span>
           </h2>
           <div class="section-about__content">
             <div>
@@ -225,23 +231,24 @@
                 efficiency and organizing skills. I like to pay attention to details and consider myself
                 as a self motivated person. Looking forward to new challenges and meeting new people.
               </p>
-              <a class="primary-button" href="assets/documents/Marina_Zujic_Resume.pdf" download target="_blank">
+              <a class="primary-button" href="assets/documents/Marina_Zujic_Resume.pdf" download target="_blank"
+                rel="noopener" aria-label="Link will open resume pdf document">
                 DOWNLOAD CV</a>
             </div>
             <ul class="section-about__icons">
               <li class="section-about__icons-wrapp">
                 <img src="assets/images/icons/html.svg" class="pulsate-fwd"
                   alt="icon html markup language for web pages" />
-                <h4>HTML</h4>
+                <h3>HTML</h3>
               </li>
               <li class="section-about__icons-wrapp">
                 <img src="assets/images/icons/js.svg" class="pulsate-fwd" alt="icon javascript programming language" />
-                <h4>JavaScript</h4>
+                <h3>JavaScript</h3>
               </li>
               <li class="section-about__icons-wrapp">
                 <img src="assets/images/icons/css.svg" class="pulsate-fwd"
                   alt="icon css style sheet programming language" />
-                <h4>CSS</h4>
+                <h3>CSS</h3>
               </li>
             </ul>
           </div>
@@ -256,18 +263,18 @@
             <div>
               <ul class="section-contact__icons">
                 <li class="section-contact__icon">
-                  <a href="https://github.com/marinazzz" target="_blank">
+                  <a href="https://github.com/marinazzz" target="_blank" rel="noopener">
                     <img src="assets/images/icons/github.svg"
                       alt="icon github hosting service for software development" />
                   </a>
                 </li>
                 <li class="section-contact__icon">
-                  <a href="https://www.linkedin.com/in/marina-zujic" target="_blank">
+                  <a href="https://www.linkedin.com/in/marina-zujic" target="_blank" rel="noopener">
                     <img src="assets/images/icons/linkedin.svg" alt="icon linkedin social network for proffesionals" />
                   </a>
                 </li>
                 <li class="section-contact__icon">
-                  <a href="mailto: contact@marina-zujic.com" target="_blank">
+                  <a href="mailto: contact@marina-zujic.com" target="_blank" rel="noopener">
                     <img src="assets/images/icons/email.svg" alt="icon email open letter" />
                   </a>
                 </li>
@@ -279,7 +286,8 @@
     </main>
     <footer class="footer">
       <div class="container container--display-block">
-        <a class="footer__link link-main-hover" href="https://github.com/marinazzz" target="_blank">© Marina
+        <a class="footer__link link-main-hover" href="https://github.com/marinazzz" target="_blank" rel="noopener">©
+          Marina
           Zujic</a>
         <span class="footer__link">
           All Rights Reserved

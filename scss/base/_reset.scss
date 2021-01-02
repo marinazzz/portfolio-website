@@ -1,51 +1,56 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-	overflow: hidden;
-	min-height: 100%;
+  overflow: hidden;
+  min-height: 100%;
 }
 
 a {
-	color: $primary-link-color;
-	text-decoration: none;
-	font-weight: 400;
-	letter-spacing: 0.1rem;
+  color: $primary-link-color;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 
 p {
-	margin: 0;
+  margin: 0;
 }
 
 img,
 li {
-	display: block;
+  display: block;
+}
+
+img {
+  height: auto;
+  width: 100%;
 }
 
 ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-	display: block;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	font-family: inherit;
-	text-decoration: none;
-	text-align: center;
+  display: block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  text-decoration: none;
+  text-align: center;
 }

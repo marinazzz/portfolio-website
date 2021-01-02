@@ -1,103 +1,129 @@
 body.dark-mode {
-	background-color: $body-bcd;
-	color: $text-on-body-bcd;
+  background-color: $body-bcd;
+  color: $text-on-body-bcd;
 
-	//sections
-	& header,
-	& header .nav__menu,
-	& header .nav__list-wrapp,
-	& .section-hero,
-	& .section-about,
-	& footer {
-		background-color: inherit;
-	}
+  //sections
+  & header,
+  & header .nav__menu,
+  & header .nav__list-wrapp,
+  & .section-hero,
+  & .section-about,
+  & footer {
+    background-color: inherit;
+  }
 
-	& .grid--bcd,
-	& .section-contact,
-	& header .nav__list-wrapp--open {
-		background-color: $components-bcd;
-	}
-	//typography
-	& h1,
-	& h2 {
-		color: $text-on-body-bcd;
-	}
+  & .grid--bcd,
+  & .section-contact,
+  & header .nav__list-wrapp--open {
+    background-color: $components-bcd;
+  }
+  //typography
+  & h1,
+  & h2 {
+    color: $text-on-body-bcd;
+  }
 
-	& h3 {
-		color: $heading-on-components;
-	}
+  & .modal-title {
+    border-bottom-color: $color-links;
+  }
 
-	& p,
-	& h4,
-	& ul {
-		color: $text-on-components;
-	}
+  & h3 {
+    color: $heading-on-components;
+  }
 
-	& .section-heading--neutral {
-		color: $color-links;
-	}
+  & p,
+  & h4,
+  & ul {
+    color: $text-on-components;
+  }
 
-	& .section-hero__description-h1::before,
-	& .section-hero__description-h1::after,
-	& .section-hero__description-row1::before,
-	& .section-hero__description-row2::after {
-		color: $color-pseudo;
-	}
+  & .section-heading--neutral {
+    color: $color-links;
+  }
 
-	& .section-heading--accent {
-		color: $color-links;
-	}
+  & .section-hero__description-h1::before,
+  & .section-hero__description-h1::after,
+  & .section-hero__description-row1::before,
+  & .section-hero__description-row2::after {
+    color: $color-pseudo;
+  }
 
-	//links
-	& a,
-	& .grid__card-text--links a,
-	& .grid__card-text--links .info-btn,
-	& .footer__link,
-	& .primary-button,
-	& .primary-button--ghost {
-		color: $color-links;
+  & .section-heading--accent {
+    color: $color-links;
+  }
 
-		&:hover {
-			color: lighten($color: #9994ff, $amount: 10);
-		}
-	}
+  //links
+  & a,
+  & .footer__link,
+  & .primary-button,
+  & .primary-button--ghost {
+    color: $color-links;
 
-	& .primary-button {
-		color: $text-on-buttons;
-		background-color: $btn-bcd;
-	}
+    &:hover {
+      color: lighten($color: #9994ff, $amount: 10);
+    }
+  }
 
-	& .primary-button--ghost {
-		color: $text-on-buttons-light;
-		background-color: inherit;
-		border: 0.1rem $text-on-buttons-light solid;
+  & .grid__card-text--links a,
+  & .grid__card-text--links .info-btn {
+    color: $color-links-on-lighter;
 
-		&:hover {
-			background-color: $btn-bcd;
-		}
-	}
+    &:hover {
+      color: lighten($color: #b2aefb, $amount: 10);
+    }
+  }
 
-	//cards
-	& .grid__card,
-	& .modal-window {
-		background-color: $card-bcd;
-	}
+  & .primary-button,
+  & .nav__button {
+    color: $text-on-buttons;
+    background-color: $btn-bcd;
+  }
 
-	& .grid__card-text--links {
-		background-color: $card-bcd-light-row;
-	}
+  & .primary-button--ghost {
+    color: $text-on-buttons-light;
+    background-color: inherit;
+    border: 0.1rem $text-on-buttons-light solid;
 
-	//graphics
-	& .grid__card-graphic-item {
-		filter: opacity(0.9);
-	}
+    &:hover {
+      background-color: $btn-bcd;
+    }
+  }
+  & .nav__button-item {
+    background-color: $text-on-buttons;
+  }
 
-	& .section-hero__image,
-	& .section-hero__image::before {
-		opacity: 0.7;
-	}
+  //cards
+  & .grid__card,
+  & .modal-window {
+    background-color: $card-bcd;
+  }
 
-	& .section-about__icons-wrapp img {
-		filter: contrast(0.2);
-	}
+  & .grid__card-text--links {
+    background-color: $card-bcd-light-row;
+  }
+
+  //graphics
+  & .grid__card-graphic-item {
+    filter: opacity(0.9);
+  }
+
+  & .section-hero__image,
+  & .section-hero__image::before {
+    opacity: 0.7;
+  }
+
+  & .section-about__icons-wrapp img {
+    filter: contrast(0.2);
+  }
+
+  & .section-hero__description-icon {
+    background: no-repeat center/95%
+      url(../assets/images/icons/arrpw-down-dark-mode.svg);
+  }
+
+  & .grid--bcd::before,
+  & .section-contact::before {
+    background: url(../assets/images/icons/polygon-3-purple-dark-mode.svg)
+      no-repeat;
+  }
 }
